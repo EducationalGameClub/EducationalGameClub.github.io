@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:kDfr0KoRnyLjADG2HhfZH
+SUMMARY:Educational Game Club Event: Discussion of Headlines and High Water
+DTSTAMP:20241231T060553Z
+DTSTART:20250117T020000Z
+DESCRIPTION:Join video call: https://meet.google.com/izp-ezjm-cyj\n\nEvent 
+	details: https://EducationalGameClub.github.io/events/2025-01/
+URL:https://educationalgameclub.github.io/events/2025-01/
+LOCATION:https://meet.google.com/izp-ezjm-cyj
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
