@@ -23,6 +23,15 @@ function spawn(command, ...args) {
   return spawn2(command, args, undefined);
 }
 
+function gitHasLocalChanges() {
+  return spawn('git', 'status', '--porcelain').trim().length > 0;
+}
+
+function gitHeadSha() {
+  return spawn('git', 'rev-parse', 'HEAD').toString('utf8').trim();
+}
+
+
 function eventFullTitle(evt) {
   return 'Educational Game Club Event: ' + evt.title;
 }
@@ -82,6 +91,7 @@ async function renderEventPage(evt) {
 async function handleEventPage(evt) {
   const eventHtml = await renderEventPage(evt);
 
+  spawn('mkdir', '-p', evt.outDirPath);
   await fs.writeFile(path.join(evt.outDirPath, 'index.html'), eventHtml, { encoding: 'utf8' });
   await fs.writeFile(path.join(evt.outDirPath, 'event.ics'), eventIcs(evt), { encoding: 'utf8' });
 }
@@ -107,7 +117,16 @@ async function renderPage(page) {
 async function handlePage(page) {
   const pageHtml = await renderPage(page);
 
+  spawn('mkdir', '-p', page.outDirPath);
   await fs.writeFile(path.join(page.outDirPath, 'index.html'), pageHtml, { encoding: 'utf8' });
+}
+
+async function handleVersionTxt(config) {
+  await fs.writeFile(
+    path.join(config.outDirPath, 'version.txt'),
+    gitHeadSha() + (gitHasLocalChanges() ? ' with local changes' : ''),
+    { encoding: 'utf8' },
+  );
 }
 
 function renderAddToGoogleCalendarUrl(evt) {
@@ -219,20 +238,30 @@ function renderDateTime(date) {
   return renderDate(date) + ' ' + renderTime(date);
 }
 
-await handlePage({
-  title: 'Educational Game Club',
+async function main() {
+  await handleVersionTxt({ outDirPath: './_gh-pages/' });
 
-  inDirPath: './content/',
-  outDirPath: './_deploy/',
-});
+  await handlePage({
+    title: 'Educational Game Club',
+  
+    inDirPath: './content/',
+    outDirPath: './_gh-pages/',
+  });
+  
+  await handleEventPage({
+    title: 'Discussion of Headlines and High Water',
+    start: makeUtcDate(2025, 1, 17, 2),
+    duration: { hours: 1, minutes: 30 },
+    callUrl: 'https://meet.google.com/izp-ezjm-cyj',
+    eventUrl: 'https://EducationalGameClub.github.io/events/2025-01/',
+  
+    inDirPath: './content/events/2025-01/',
+    outDirPath: './_gh-pages/events/2025-01/',
+  });
+  
+  if (gitHasLocalChanges()) {
+    console.log('\nWarning: git has local changes\n');
+  }
+}
 
-await handleEventPage({
-  title: 'Discussion of Headlines and High Water',
-  start: makeUtcDate(2025, 1, 17, 2),
-  duration: { hours: 1, minutes: 30 },
-  callUrl: 'https://meet.google.com/izp-ezjm-cyj',
-  eventUrl: 'https://EducationalGameClub.github.io/events/2025-01/',
-
-  inDirPath: './content/events/2025-01/',
-  outDirPath: './_deploy/events/2025-01/',
-});
+main();
