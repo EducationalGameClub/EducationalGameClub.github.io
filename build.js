@@ -31,8 +31,11 @@ function gitHeadSha() {
   return spawn('git', 'rev-parse', 'HEAD').toString('utf8').trim();
 }
 
+function calendarEventTitle(evt) {
+  return 'Educational Game Club ' + evt.title;
+}
 
-function eventFullTitle(evt) {
+function pageTitle(evt) {
   return 'Educational Game Club Event: ' + evt.title;
 }
 
@@ -45,7 +48,7 @@ function eventCalendarDescription(evt) {
 
 function eventAddToGoogleCalendarUrl(evt) {
   return renderAddToGoogleCalendarUrl({
-    title: eventFullTitle(evt),
+    title: calendarEventTitle(evt),
     location: 'Online event',
     startDate: evt.start,
     endDate: addDuration(evt.start, evt.duration),
@@ -55,7 +58,7 @@ function eventAddToGoogleCalendarUrl(evt) {
 
 function eventIcs(evt) {
   const icsData = ics.createEvent({
-    title: eventFullTitle(evt),
+    title: calendarEventTitle(evt),
     startInputType: 'utc',
     start: toUtcDateArray(evt.start),
     duration: evt.duration,
@@ -73,7 +76,7 @@ async function renderEventPage(evt) {
     return (
       s
         .replaceAll('$$EventTitle$$', evt.title)
-        .replaceAll('$$PageTitle$$', eventFullTitle(evt))
+        .replaceAll('$$PageTitle$$', pageTitle(evt))
         .replaceAll('$$CallUrl$$', evt.callUrl)
         .replaceAll('$$GoogleCalendarUrl$$', eventAddToGoogleCalendarUrl(evt))
     );
