@@ -276,16 +276,16 @@ async function main() {
     outDirPath: './_gh-pages/events/2025-01/',
   });
 
-  await handleEventPage({
-    title: 'Discussion of DragonBox Algebra 12+',
-    start: makeUtcDate(2025, 2, 21, 2),
-    duration: { hours: 1, minutes: 30 },
-    callUrl: 'https://meet.google.com/amb-hvoh-moy',
-    eventUrl: 'https://EducationalGameClub.github.io/events/2025-02/',
+  // await handleEventPage({
+  //   title: 'Discussion of DragonBox Algebra 12+',
+  //   start: makeUtcDate(2025, 2, 21, 2),
+  //   duration: { hours: 1, minutes: 30 },
+  //   callUrl: 'https://meet.google.com/amb-hvoh-moy',
+  //   eventUrl: 'https://EducationalGameClub.github.io/events/2025-02/',
   
-    inDirPath: './content/events/2025-02/',
-    outDirPath: './_gh-pages/events/2025-02/',
-  });
+  //   inDirPath: './content/events/2025-02/',
+  //   outDirPath: './_gh-pages/events/2025-02/',
+  // });
   
   if (gitHasLocalChanges()) {
     console.log('\nWarning: git has local changes\n');
