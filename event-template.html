@@ -33,6 +33,16 @@
       margin-bottom: 0;
     }
 
+
+    .markdown-body .past-event-notice {
+      background-color: black;
+      color: lightgray;
+      margin-bottom: 0.5em;
+      padding-left: 5px;
+      padding-right: 5px;
+      display: $$PastEventDisplay$$;
+    }
+
     .markdown-body .action-item-container {
       /* white-space: nowrap; */
       /* overflow-x: auto;
@@ -96,6 +106,7 @@
   <article class="markdown-body">
     <h1>Educational Game Club Event</h1>
     <h2>$$EventTitle$$</h2>
+    <div class="past-event-notice">This event has already ended</div>
     <div class="action-item-container">
       <details id="calendar-dropdown">
         <summary><span class="dropdown-label">📅 Add to Calendar</span>&#x25BC;</summary>

@@ -79,6 +79,7 @@ async function renderEventPage(evt) {
         .replaceAll('$$PageTitle$$', pageTitle(evt))
         .replaceAll('$$CallUrl$$', evt.callUrl)
         .replaceAll('$$GoogleCalendarUrl$$', eventAddToGoogleCalendarUrl(evt))
+        .replaceAll('$$PastEventDisplay$$', evt.isPastEvent ? 'block' : 'none')
     );
   }
 
@@ -160,7 +161,7 @@ function renderAddToGoogleCalendarUrl(evt) {
   );
 }
 
-function makeUtcDate(year, month = 1, day = 0, hour = 0, minute = 0) {
+function makeUtcDate(year, month = 1, day = 1, hour = 0, minute = 0) {
   return new Date(Date.UTC(year, month - 1, day, hour, minute));
 }
 
@@ -250,16 +251,40 @@ async function main() {
     inDirPath: './content/',
     outDirPath: './_gh-pages/',
   });
+
+  await handleEventPage({
+    title: 'Discussion of Portal',
+    start: makeUtcDate(2024, 12, 20, 2),
+    duration: { hours: 1, minutes: 30 },
+    callUrl: 'https://meet.google.com/nyk-twnw-anu',
+    eventUrl: 'https://EducationalGameClub.github.io/events/2024-12/',
+    isPastEvent: true,
   
+    inDirPath: './content/events/2024-12/',
+    outDirPath: './_gh-pages/events/2024-12/',
+  });
+
   await handleEventPage({
     title: 'Discussion of Headlines and High Water',
     start: makeUtcDate(2025, 1, 17, 2),
     duration: { hours: 1, minutes: 30 },
     callUrl: 'https://meet.google.com/izp-ezjm-cyj',
     eventUrl: 'https://EducationalGameClub.github.io/events/2025-01/',
+    isPastEvent: true,
   
     inDirPath: './content/events/2025-01/',
     outDirPath: './_gh-pages/events/2025-01/',
+  });
+
+  await handleEventPage({
+    title: 'Discussion of DragonBox Algebra 12+',
+    start: makeUtcDate(2025, 2, 21, 2),
+    duration: { hours: 1, minutes: 30 },
+    callUrl: 'https://meet.google.com/amb-hvoh-moy',
+    eventUrl: 'https://EducationalGameClub.github.io/events/2025-02/',
+  
+    inDirPath: './content/events/2025-02/',
+    outDirPath: './_gh-pages/events/2025-02/',
   });
   
   if (gitHasLocalChanges()) {
