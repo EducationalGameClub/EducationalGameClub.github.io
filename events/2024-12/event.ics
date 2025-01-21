@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:cb544ca5-52d5-47b0-abfb-30623a007f4b
+SUMMARY:Educational Game Club Discussion of Portal
+DTSTAMP:20250121T224635Z
+DTSTART:20241220T020000Z
+DESCRIPTION:Join video call: https://meet.google.com/nyk-twnw-anu\n\nEvent 
+	details: https://EducationalGameClub.github.io/events/2024-12/
+URL:https://educationalgameclub.github.io/events/2024-12/
+LOCATION:https://meet.google.com/nyk-twnw-anu
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
