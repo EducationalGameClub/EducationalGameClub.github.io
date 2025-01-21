@@ -3,7 +3,18 @@ import * as fs from 'fs/promises';
 import * as path from 'path';
 import * as child_process from 'child_process';
 import * as ics from 'ics';
-import { error } from 'console';
+
+const ANSI = {
+  reset: '\x1b[0m',
+
+  bright: '\x1b[1m',
+
+  fgRed: '\x1b[31m',
+};
+
+function style(styles, text) {
+  return styles.join('') + text + ANSI.reset;
+}
 
 function pp(x) {
   return JSON.stringify(x, undefined, 2);
@@ -142,6 +153,26 @@ async function handleVersionTxt(config) {
   );
 }
 
+async function renderNextEventPage(config) {
+  function replaceVariables(s, config) {
+    return (
+      s
+        .replaceAll('$$EventUrl$$', config.nextEvent.eventUrl)
+    );
+  }
+
+  const template = await fs.readFile('./next-event-template.html', { encoding: 'utf8' });
+  const pageHtml = replaceVariables(template, config);
+  return pageHtml;
+}
+
+async function handleNextEventPage(config) {
+  const pageHtml = await renderNextEventPage(config);
+
+  spawn('mkdir', '-p', path.dirname(config.outPath));
+  await fs.writeFile(config.outPath, pageHtml, { encoding: 'utf8' });
+}
+
 function renderAddToGoogleCalendarUrl(evt) {
   function pad2Digits(n) {
     return ('' + n).padStart(2, 0);
@@ -252,6 +283,47 @@ function renderDateTime(date) {
 }
 
 async function main() {
+  const events = [
+    {
+      title: 'Discussion of Portal',
+      uid: 'cb544ca5-52d5-47b0-abfb-30623a007f4b',
+      start: makeUtcDate(2024, 12, 20, 2),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/nyk-twnw-anu',
+      eventUrl: 'https://EducationalGameClub.github.io/events/2024-12/',
+      isPastEvent: true,
+    
+      inDirPath: './content/events/2024-12/',
+      outDirPath: './_gh-pages/events/2024-12/',
+    },
+    
+    {
+      title: 'Discussion of Headlines and High Water',
+      uid: 'a5K-9JBCcND-1KgQpiX6l',
+      start: makeUtcDate(2025, 1, 17, 2),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/izp-ezjm-cyj',
+      eventUrl: 'https://EducationalGameClub.github.io/events/2025-01/',
+      isPastEvent: true,
+    
+      inDirPath: './content/events/2025-01/',
+      outDirPath: './_gh-pages/events/2025-01/',
+    },
+
+    // {
+    //   uid: '38d36e04-6b73-4870-8348-dae1421b5968',
+    //   title: 'Discussion of DragonBox Algebra 12+',
+    //   start: makeUtcDate(2025, 2, 21, 2),
+    //   duration: { hours: 1, minutes: 30 },
+    //   callUrl: 'https://meet.google.com/amb-hvoh-moy',
+    //   eventUrl: 'https://EducationalGameClub.github.io/events/2025-02/',
+    
+    //   inDirPath: './content/events/2025-02/',
+    //   outDirPath: './_gh-pages/events/2025-02/',
+    // }
+  ];
+  const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
+
   await handleVersionTxt({ outDirPath: './_gh-pages/' });
 
   await handlePage({
@@ -261,47 +333,25 @@ async function main() {
     outDirPath: './_gh-pages/',
   });
 
-  await handleEventPage({
-    uid: 'cb544ca5-52d5-47b0-abfb-30623a007f4b',
-    title: 'Discussion of Portal',
-    start: makeUtcDate(2024, 12, 20, 2),
-    duration: { hours: 1, minutes: 30 },
-    callUrl: 'https://meet.google.com/nyk-twnw-anu',
-    eventUrl: 'https://EducationalGameClub.github.io/events/2024-12/',
-    isPastEvent: true,
-  
-    inDirPath: './content/events/2024-12/',
-    outDirPath: './_gh-pages/events/2024-12/',
-  });
-
-  await handleEventPage({
-    uid: 'a5K-9JBCcND-1KgQpiX6l',
-    title: 'Discussion of Headlines and High Water',
-    start: makeUtcDate(2025, 1, 17, 2),
-    duration: { hours: 1, minutes: 30 },
-    callUrl: 'https://meet.google.com/izp-ezjm-cyj',
-    eventUrl: 'https://EducationalGameClub.github.io/events/2025-01/',
-    isPastEvent: true,
-  
-    inDirPath: './content/events/2025-01/',
-    outDirPath: './_gh-pages/events/2025-01/',
-  });
-
-  // await handleEventPage({
-  //   uid: '38d36e04-6b73-4870-8348-dae1421b5968',
-  //   title: 'Discussion of DragonBox Algebra 12+',
-  //   start: makeUtcDate(2025, 2, 21, 2),
-  //   duration: { hours: 1, minutes: 30 },
-  //   callUrl: 'https://meet.google.com/amb-hvoh-moy',
-  //   eventUrl: 'https://EducationalGameClub.github.io/events/2025-02/',
-  
-  //   inDirPath: './content/events/2025-02/',
-  //   outDirPath: './_gh-pages/events/2025-02/',
-  // });
-  
-  if (gitHasLocalChanges()) {
-    console.log('\nWarning: git has local changes\n');
+  for (const evt of events)  {
+    await handleEventPage(evt);
   }
+
+  await handleNextEventPage({
+    nextEvent: nextEvent,
+
+    outPath: './_gh-pages/events/next.html',
+  });
+
+  const messages = [
+    `${style([ANSI.bright], nextEvent.title)} (next event)`,
+  ];
+
+  if (gitHasLocalChanges()) {
+    messages.push(`${style([ANSI.fgRed, ANSI.bright], 'WARNING:')} git has local changes`);
+  }
+
+  console.log(`\n${messages.join('\n')}\n`);
 }
 
 main();
