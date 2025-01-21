@@ -5,6 +5,10 @@ import * as child_process from 'child_process';
 import * as ics from 'ics';
 import { error } from 'console';
 
+function pp(x) {
+  return JSON.stringify(x, undefined, 2);
+}
+
 function assert(pred, msg) {
   if (!pred) {
     throw new Error(msg);
@@ -57,7 +61,12 @@ function eventAddToGoogleCalendarUrl(evt) {
 }
 
 function eventIcs(evt) {
+  // Require `uid` so calendar events in ICS files maintain their UIDs across
+  // builds of the web site.
+  assert('uid' in evt, `eventIcs: 'uid' is a required field of 'evt'. evt: ${pp(evt)}`);
+
   const icsData = ics.createEvent({
+    uid: evt.uid,
     title: calendarEventTitle(evt),
     startInputType: 'utc',
     start: toUtcDateArray(evt.start),
@@ -253,6 +262,7 @@ async function main() {
   });
 
   await handleEventPage({
+    uid: 'cb544ca5-52d5-47b0-abfb-30623a007f4b',
     title: 'Discussion of Portal',
     start: makeUtcDate(2024, 12, 20, 2),
     duration: { hours: 1, minutes: 30 },
@@ -265,6 +275,7 @@ async function main() {
   });
 
   await handleEventPage({
+    uid: 'a5K-9JBCcND-1KgQpiX6l',
     title: 'Discussion of Headlines and High Water',
     start: makeUtcDate(2025, 1, 17, 2),
     duration: { hours: 1, minutes: 30 },
@@ -277,6 +288,7 @@ async function main() {
   });
 
   // await handleEventPage({
+  //   uid: '38d36e04-6b73-4870-8348-dae1421b5968',
   //   title: 'Discussion of DragonBox Algebra 12+',
   //   start: makeUtcDate(2025, 2, 21, 2),
   //   duration: { hours: 1, minutes: 30 },
