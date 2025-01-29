@@ -95,11 +95,16 @@ async function renderEventPage(evt) {
   function replaceVariables(s, evt) {
     return (
       s
+        .replaceAll('$$EventUrl$$', evt.eventUrl)
         .replaceAll('$$EventTitle$$', evt.title)
+        .replaceAll('$$EventBrief$$', evt.brief ?? '')
         .replaceAll('$$PageTitle$$', pageTitle(evt))
         .replaceAll('$$CallUrl$$', evt.callUrl)
         .replaceAll('$$GoogleCalendarUrl$$', eventAddToGoogleCalendarUrl(evt))
         .replaceAll('$$PastEventDisplay$$', evt.isPastEvent ? 'block' : 'none')
+        .replaceAll('$$ImageUrl$$', evt.image ? evt.eventUrl + evt.image.name : '')
+        .replaceAll('$$ImageWidth$$', evt.image ? evt.image.width : '')
+        .replaceAll('$$ImageHeight$$', evt.image ? evt.image.height : '')
     );
   }
 
@@ -118,6 +123,9 @@ async function handleEventPage(evt) {
   spawn('mkdir', '-p', evt.outDirPath);
   await fs.writeFile(path.join(evt.outDirPath, 'index.html'), eventHtml, { encoding: 'utf8' });
   await fs.writeFile(path.join(evt.outDirPath, 'event.ics'), eventIcs(evt), { encoding: 'utf8' });
+  if (evt.image) {
+    await fs.copyFile(path.join(evt.inDirPath, evt.image.name), path.join(evt.outDirPath, evt.image.name));
+  }
 }
 
 
@@ -313,10 +321,12 @@ async function main() {
     {
       uid: '38d36e04-6b73-4870-8348-dae1421b5968',
       title: 'Discussion of DragonBox Algebra',
+      brief: `We'll be discussing DragonBox Algebra, a game where players learn concepts from algebra experientially through puzzles of gradually increasing difficulty.`,
       start: makeUtcDate(2025, 2, 20, 2),
       duration: { hours: 1, minutes: 30 },
       callUrl: 'https://meet.google.com/amb-hvoh-moy',
       eventUrl: 'https://EducationalGameClub.github.io/events/2025-02/',
+      image: { name: 'image.png', width: 600, height: 337 },
     
       inDirPath: './content/events/2025-02/',
       outDirPath: './_gh-pages/events/2025-02/',
