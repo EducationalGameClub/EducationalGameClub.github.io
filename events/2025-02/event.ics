@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:38d36e04-6b73-4870-8348-dae1421b5968
+SUMMARY:Educational Game Club Discussion of DragonBox Algebra
+DTSTAMP:20250129T004551Z
+DTSTART:20250220T020000Z
+DESCRIPTION:Join video call: https://meet.google.com/amb-hvoh-moy\n\nEvent 
+	details: https://EducationalGameClub.github.io/events/2025-02/
+URL:https://educationalgameclub.github.io/events/2025-02/
+LOCATION:https://meet.google.com/amb-hvoh-moy
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
