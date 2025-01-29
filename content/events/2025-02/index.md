@@ -48,7 +48,7 @@ If you have any questions, comments, or suggestions for games we should consider
 ### Additional Activity Ideas
 In addition to playing the game, here are some things that might be interesting to do:
 - **If you like research**, consider looking into what researchers have learned from DragonBox Algebra in the 10+ years since it was released. As potential starting points, you could check out the following searches on these research search engines:
-	- [Google Scholar](https://scholar.google.ca/scholar?q=dragonbox)
+	- [Google Scholar](https://scholar.google.com/scholar?q=dragonbox)
 	- [ERIC (Education Resources Information Center)](https://eric.ed.gov/?q=dragonbox&pr=on)
 - **If you have any children**, watch them play one of the DragonBox Algebra games:
 	- [DragonBox Algebra 12+](https://dragonbox.com/products/algebra-12), designed for **9 year olds & up**
