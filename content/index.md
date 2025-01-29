@@ -3,9 +3,9 @@ Each month, we pick an educational game, play it, and then meet to discuss it. I
 
 [Subscribe to Educational Game Club](https://forms.gle/zqG56ErXTdNzSTF6A) to get notified each time we schedule an event.
 
-**The next event** will take place in February and will be announced soon.
+<!-- **The next event** will take place in February and will be announced soon. -->
 
-<!-- Check out [our next event](/events/2025-02/). -->
+Check out [our next event](/events/2025-02/).
 
 <div style="opacity: 0.65; margin-top: 50px;">
   <h2>Past Events</h2>

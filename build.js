@@ -310,17 +310,17 @@ async function main() {
       outDirPath: './_gh-pages/events/2025-01/',
     },
 
-    // {
-    //   uid: '38d36e04-6b73-4870-8348-dae1421b5968',
-    //   title: 'Discussion of DragonBox Algebra 12+',
-    //   start: makeUtcDate(2025, 2, 21, 2),
-    //   duration: { hours: 1, minutes: 30 },
-    //   callUrl: 'https://meet.google.com/amb-hvoh-moy',
-    //   eventUrl: 'https://EducationalGameClub.github.io/events/2025-02/',
+    {
+      uid: '38d36e04-6b73-4870-8348-dae1421b5968',
+      title: 'Discussion of DragonBox Algebra',
+      start: makeUtcDate(2025, 2, 20, 2),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/amb-hvoh-moy',
+      eventUrl: 'https://EducationalGameClub.github.io/events/2025-02/',
     
-    //   inDirPath: './content/events/2025-02/',
-    //   outDirPath: './_gh-pages/events/2025-02/',
-    // }
+      inDirPath: './content/events/2025-02/',
+      outDirPath: './_gh-pages/events/2025-02/',
+    }
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 

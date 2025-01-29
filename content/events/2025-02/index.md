@@ -29,7 +29,7 @@
   }
 </style>
 
-<span class="label2">Date:</span> Thursday February 20, 2025  
+<span class="label2">Date:</span> Wednesday February 19, 2025  
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="label2">Time (PST):</span> 6:00 PM to 7:30 PM  
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="label2">Time (EST):</span> 9:00 PM to 10:30 PM  
 <span class="label2">Location:</span> Online. [Join with Google Meet]($$CallUrl$$)  
@@ -37,7 +37,7 @@
 
 <div style="height: 1px; background-color: #d1d9e0b3; margin-bottom: 1rem;"></div>
 
-The next meeting of the Educational Game Club will be on Thursday February 20. It'll be [an online meeting using Google Meet]($$CallUrl$$). 
+The next meeting of the Educational Game Club will be on Wednesday February 19. It'll be [an online meeting using Google Meet]($$CallUrl$$). 
 
 We’ll be discussing the game [DragonBox Algebra 12+](https://dragonbox.com/products/algebra-12). It's a game designed for 9 year olds & up where players learn concepts from algebra experientially through puzzles of gradually increasing difficulty. 
 
