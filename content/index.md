@@ -7,7 +7,7 @@ Join the discussion on [our forum](https://discourse.educationalgameclub.com/).
 
 <!-- **The next event** will take place in February and will be announced soon. -->
 
-Check out [our next event](/events/next/).
+Check out [our next event](/events/next).
 
 <div style="opacity: 0.65; margin-top: 50px;">
   <h2>Past Events</h2>
