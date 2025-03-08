@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:ea382f95-9971-436b-924d-e485ee9db2c6
+SUMMARY:Educational Game Club Discussion of Night of the Living Debt
+DTSTAMP:20250308T041200Z
+DTSTART:20250328T010000Z
+DESCRIPTION:Join video call: https://meet.google.com/oyh-odwe-qzx\n\nEvent 
+	details: https://EducationalGameClub.com/events/2025-03/
+URL:https://educationalgameclub.com/events/2025-03/
+LOCATION:https://meet.google.com/oyh-odwe-qzx
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
