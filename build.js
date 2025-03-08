@@ -327,9 +327,23 @@ async function main() {
       callUrl: 'https://meet.google.com/amb-hvoh-moy',
       eventUrl: 'https://EducationalGameClub.github.io/events/2025-02/',
       image: { name: 'image.png', width: 600, height: 337 },
+      isPastEvent: true,
     
       inDirPath: './content/events/2025-02/',
       outDirPath: './_gh-pages/events/2025-02/',
+    },
+    {
+      uid: 'ea382f95-9971-436b-924d-e485ee9db2c6',
+      title: 'Discussion of Night of the Living Debt',
+      brief: `We'll be discussing the game Night of the Living Debt which is designed to promote financial literacy among young adults, especially around credit score.`,
+      start: makeUtcDate(2025, 3, 28, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/oyh-odwe-qzx',
+      eventUrl: 'https://EducationalGameClub.com/events/2025-03/',
+      // image: { name: 'image.png', width: 600, height: 337 },
+    
+      inDirPath: './content/events/2025-03/',
+      outDirPath: './_gh-pages/events/2025-03/',
     }
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
