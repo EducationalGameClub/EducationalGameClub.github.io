@@ -385,7 +385,7 @@ async function main() {
       duration: { hours: 1, minutes: 30 },
       callUrl: 'https://meet.google.com/oyh-odwe-qzx',
       eventUrl: 'https://EducationalGameClub.com/events/2025-03/',
-      // image: { name: 'image.png', width: 600, height: 337 },
+      image: { name: 'image.png', width: 600, height: 333 },
     
       inDirPath: './content/events/2025-03/',
       outDirPath: './_gh-pages/events/2025-03/',
