@@ -1,13 +1,43 @@
+<style>
+  .emoji-paragraph {
+    display: flex;
+    margin-bottom: 1em;
+  }
+
+  .emoji-paragraph .emoji {
+    flex: 0;
+  }
+
+  .emoji-paragraph .description {
+    flex: 1;
+  }
+</style>
+
 # Educational Game Club
 Each month, we pick an educational game, play it, and then meet to discuss it. It’s like a book club but for educational games instead of books.
 
-[Subscribe to Educational Game Club](https://forms.gle/zqG56ErXTdNzSTF6A) to get notified each time we schedule an event.
+<div class="emoji-paragraph">
+  <div class="emoji">🔔&nbsp;</div>
+  <div class="description">
+    <a href="https://forms.gle/zqG56ErXTdNzSTF6A">Subscribe to Educational Game Club</a> to get notified when we schedule events.
+  </div>
+</div>
 
-Join the discussion on [our forum](https://discourse.educationalgameclub.com/).
+<div class="emoji-paragraph">
+  <div class="emoji">💬&nbsp;</div>
+  <div class="description">
+    Join the discussion on <a href="https://discourse.educationalgameclub.com/">our forum</a>.
+  </div>
+</div>
 
 <!-- **The next event** will take place in February and will be announced soon. -->
 
-Check out [our next event](/events/next).
+<div class="emoji-paragraph">
+  <div class="emoji">📅&nbsp;</div>
+  <div class="description">
+    Check out <a href="/events/next">our next event</a>.
+  </div>
+</div>
 
 <div style="opacity: 0.65; margin-top: 50px;">
   <h2>Past Events</h2>
