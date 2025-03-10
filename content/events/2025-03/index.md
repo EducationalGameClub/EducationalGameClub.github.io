@@ -30,8 +30,8 @@
 </style>
 
 <span class="label2">Date:</span> Thursday March 27, 2025  
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="label2">Time (PST):</span> 6:00 PM to 7:30 PM  
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="label2">Time (EST):</span> 9:00 PM to 10:30 PM  
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="label2">Time (PDT):</span> 6:00 PM to 7:30 PM  
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="label2">Time (EDT):</span> 9:00 PM to 10:30 PM  
 <span class="label2">Location:</span> Online. [Join with Google Meet]($$CallUrl$$)  
 <span class="label2">Game:</span> [Night of the Living Debt (2016)](https://nightofthelivingdebt.com/)
 
