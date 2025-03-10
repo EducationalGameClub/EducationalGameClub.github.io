@@ -91,6 +91,51 @@ function eventIcs(evt) {
   return icsData.value;
 }
 
+async function readFileIfExists(filePath) {
+  try {
+    return await fs.readFile(filePath, { encoding: 'utf8' });
+  } catch (ex) {
+    if (ex.code === 'ENOENT') {
+      return undefined;
+    } else {
+      throw ex;
+    }
+  }
+}
+
+async function writeIcsFileIfChanged(filePath, ics) {
+  let didChange = false;
+
+  const prevIcs = await readFileIfExists(filePath);
+  if (prevIcs === undefined) {
+    // File doesn't exist.
+    didChange = true;
+  } else {
+    const prevLines = prevIcs.split('\n');
+    const nextLines = ics.split('\n');
+
+    if (prevLines.length === nextLines.length) {
+      for (let i = 0; i < prevLines.length; ++i) {
+        const prevLine = prevLines[i];
+        const nextLine = nextLines[i];
+
+        // This changes every time the file is written so it's not representative
+        // of the file's content changing.
+        if (prevLine.startsWith('DTSTAMP:') && nextLine.startsWith('DTSTAMP:')) continue;
+
+        if (prevLine !== nextLine) {
+          didChange = true;
+          break;
+        }
+      }
+    }
+  }
+
+  if (didChange) {
+    await fs.writeFile(filePath, ics, { encoding: 'utf8' });
+  }
+}
+
 async function renderEventPage(evt) {
   function replaceVariables(s, evt) {
     return (
@@ -122,7 +167,7 @@ async function handleEventPage(evt) {
 
   spawn('mkdir', '-p', evt.outDirPath);
   await fs.writeFile(path.join(evt.outDirPath, 'index.html'), eventHtml, { encoding: 'utf8' });
-  await fs.writeFile(path.join(evt.outDirPath, 'event.ics'), eventIcs(evt), { encoding: 'utf8' });
+  await writeIcsFileIfChanged(path.join(evt.outDirPath, 'event.ics'), eventIcs(evt));
   if (evt.image) {
     await fs.copyFile(path.join(evt.inDirPath, evt.image.name), path.join(evt.outDirPath, evt.image.name));
   }
