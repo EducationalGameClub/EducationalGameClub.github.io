@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:83ee434a-2f97-447b-91b6-de8d35a7ca2c
+SUMMARY:Educational Game Club Discussion of Executive Command
+DTSTAMP:20250408T000958Z
+DTSTART:20250501T010000Z
+DESCRIPTION:Join video call: https://meet.google.com/xpf-nxsi-ehp\n\nEvent 
+	details: https://EducationalGameClub.com/events/2025-04/
+URL:https://educationalgameclub.com/events/2025-04/
+LOCATION:https://meet.google.com/xpf-nxsi-ehp
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
