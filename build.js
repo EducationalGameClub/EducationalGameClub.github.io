@@ -399,7 +399,7 @@ async function main() {
       duration: { hours: 1, minutes: 30 },
       callUrl: 'https://meet.google.com/xpf-nxsi-ehp',
       eventUrl: 'https://EducationalGameClub.com/events/2025-04/',
-      // image: { name: 'image.jpg', width: 800, height: 450 },
+      image: { name: 'image.jpg', width: 1920, height: 1008 },
       // isPastEvent: true,
     
       inDirPath: './content/events/2025-04/',
