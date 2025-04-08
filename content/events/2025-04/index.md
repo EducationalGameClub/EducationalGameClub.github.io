@@ -29,7 +29,8 @@
   }
 </style>
 
-<span class="label2">Game:</span> [Executive Command (2010)](https://ed.icivics.org/node/594/resource) &mdash; [Web](https://ed.icivics.org/node/594/resource) | [iPad](https://apps.apple.com/us/app/executive-command/id1084786851)  
+<span class="label2">Game:</span> [Executive Command (2010)](https://ed.icivics.org/node/594/resource) &mdash; [Web](https://ed.icivics.org/node/594/resource) | [iOS](https://apps.apple.com/us/app/executive-command/id1084786851) | [Android](https://play.google.com/store/apps/details?id=com.filament.icivics.executivecommand)  
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="label2">Note:</span> Tablet or laptop recommended. Phone screens are small for this game.  
 <span class="label2">Date:</span> Wednesday April 30, 2025  
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="label2">Time (PDT):</span> 6:00 PM to 7:30 PM  
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="label2">Time (EDT):</span> 9:00 PM to 10:30 PM  
@@ -39,7 +40,7 @@
 
 We'll be discussing [Executive Command](https://ed.icivics.org/node/594/resource) by [iCivics](https://icivics.org/), a game where you play as President of the United States. Learn what the president does and how they work with the rest of the government. Designed for grades 6 to 12.
 
-Thoughts on the game before the event? Share them on [the forum](https://discourse.educationalgameclub.com/t/discussion-of-night-of-the-living-debt).
+Thoughts on the game before the event? Share them on [the forum](https://discourse.educationalgameclub.com/t/discussion-of-executive-command).
 
 ### Housekeeping
 - Playing the game before the event is encouraged but not required. The event is dedicated to discussion.
