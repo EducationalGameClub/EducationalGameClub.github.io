@@ -386,9 +386,24 @@ async function main() {
       callUrl: 'https://meet.google.com/oyh-odwe-qzx',
       eventUrl: 'https://EducationalGameClub.com/events/2025-03/',
       image: { name: 'image.jpg', width: 800, height: 450 },
+      isPastEvent: true,
     
       inDirPath: './content/events/2025-03/',
       outDirPath: './_gh-pages/events/2025-03/',
+    },
+    {
+      uid: '83ee434a-2f97-447b-91b6-de8d35a7ca2c',
+      title: 'Discussion of Executive Command',
+      brief: `We'll be discussing Executive Command by iCivics, a game where you play as President of the United States. Learn what the president does and how they work with the rest of the government.`,
+      start: makeUtcDate(2025, 5, 1, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/xpf-nxsi-ehp',
+      eventUrl: 'https://EducationalGameClub.com/events/2025-04/',
+      // image: { name: 'image.jpg', width: 800, height: 450 },
+      // isPastEvent: true,
+    
+      inDirPath: './content/events/2025-04/',
+      outDirPath: './_gh-pages/events/2025-04/',
     }
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
