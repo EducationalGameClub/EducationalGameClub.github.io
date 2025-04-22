@@ -178,7 +178,9 @@ async function renderPage(page) {
   function replaceVariables(s, page) {
     return (
       s
+        .replaceAll('$$PageUrl$$', page.url)
         .replaceAll('$$PageTitle$$', page.title)
+        .replaceAll('$$PageBrief$$', page.brief)
     );
   }
 
@@ -412,6 +414,8 @@ async function main() {
 
   await handlePage({
     title: 'Educational Game Club',
+    brief: `It's like a book club but for educational games. Each month we pick one, play it, and then meet to discuss it.`,
+    url: 'https://EducationalGameClub.com/',
   
     inDirPath: './content/',
     outDirPath: './_gh-pages/',
