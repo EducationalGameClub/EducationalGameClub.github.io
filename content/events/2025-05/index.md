@@ -37,7 +37,7 @@
 
 <div style="height: 1px; background-color: #d1d9e0b3; margin-bottom: 1rem;"></div>
 
-We'll be discussing [Slice Fractions](https://ululab.com/press-kit-slice-fractions/) by [Ululab](https://ululab.com/), a puzzle game where players learn fraction concepts experientially without verbal or written instructions. Designed for children ages 7 to 12 years.
+Based on [the poll results](https://discourse.educationalgameclub.com/t/poll-game-for-may-2025), we'll be discussing [Slice Fractions](https://ululab.com/press-kit-slice-fractions/) by [Ululab](https://ululab.com/), a puzzle game where players learn fraction concepts experientially without verbal or written instructions. Designed for children ages 7 to 12 years.
 
 Thoughts on the game before the event? Share them on  💬 [the forum](https://discourse.educationalgameclub.com/t/discussion-of-slice-fractions).
 
