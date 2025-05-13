@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:84046b98-08f7-4f09-8039-0bb3afb0f05c
+SUMMARY:Educational Game Club Discussion of Slice Fractions
+DTSTAMP:20250513T222539Z
+DTSTART:20250529T010000Z
+DESCRIPTION:Join video call: https://meet.google.com/ktw-hccy-wgm\n\nEvent 
+	details: https://EducationalGameClub.com/events/2025-05/
+URL:https://educationalgameclub.com/events/2025-05/
+LOCATION:https://meet.google.com/ktw-hccy-wgm
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
