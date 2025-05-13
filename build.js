@@ -402,11 +402,25 @@ async function main() {
       callUrl: 'https://meet.google.com/xpf-nxsi-ehp',
       eventUrl: 'https://EducationalGameClub.com/events/2025-04/',
       image: { name: 'image.jpg', width: 1920, height: 1008 },
-      // isPastEvent: true,
+      isPastEvent: true,
     
       inDirPath: './content/events/2025-04/',
       outDirPath: './_gh-pages/events/2025-04/',
-    }
+    },
+    {
+      uid: '84046b98-08f7-4f09-8039-0bb3afb0f05c',
+      title: 'Discussion of Slice Fractions',
+      brief: `We'll be discussing Slice Fractions by Ululab, a puzzle game where players learn fraction concepts experientially without verbal or written instructions. Designed for children ages 7 to 12 years.`,
+      start: makeUtcDate(2025, 5, 29, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/ktw-hccy-wgm',
+      eventUrl: 'https://EducationalGameClub.com/events/2025-05/',
+      image: { name: 'image.png', width: 1000, height: 525 },
+      // isPastEvent: true,
+    
+      inDirPath: './content/events/2025-05/',
+      outDirPath: './_gh-pages/events/2025-05/',
+    },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
