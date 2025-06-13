@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:85333bf3-909a-4326-9fd3-4aaeb456f89f
+SUMMARY:Educational Game Club Discussion of Geniventure
+DTSTAMP:20250612T214514Z
+DTSTART:20250627T010000Z
+DESCRIPTION:Join video call: https://meet.google.com/kww-yhkj-bqc\n\nEvent 
+	details: https://EducationalGameClub.com/events/2025-06/
+URL:https://educationalgameclub.com/events/2025-06/
+LOCATION:https://meet.google.com/kww-yhkj-bqc
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
