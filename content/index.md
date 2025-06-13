@@ -43,6 +43,7 @@ Each month, we pick an educational game, play it, and then meet to discuss it. I
   <h2>Past Events</h2>
 
   <ul>
+    <li><a href="/events/2025-05/">Discussion of Slice Fractions</a> (May 2025)</li>
     <li><a href="/events/2025-04/">Discussion of Executive Command</a> (Apr 2025)</li>
     <li><a href="/events/2025-03/">Discussion of Night of the Living Debt</a> (Mar 2025)</li>
     <li><a href="/events/2025-02/">Discussion of DragonBox Algebra</a> (Feb 2025)</li>

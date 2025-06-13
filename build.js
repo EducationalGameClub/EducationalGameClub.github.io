@@ -185,7 +185,7 @@ async function renderPage(page) {
   }
 
   const template = await fs.readFile('./page-template.html', { encoding: 'utf8' });
-  const pageBodyMarkdown = await fs.readFile(path.join(page.inDirPath, 'index.md'), { encoding: 'utf8' });
+  const pageBodyMarkdown = await fs.readFile(path.join(page.inDirPath, `${page.fileBase}.md`), { encoding: 'utf8' });
   const pageBodyHtml = marked.parse(replaceVariables(pageBodyMarkdown, page));
 
   return (
@@ -197,7 +197,7 @@ async function handlePage(page) {
   const pageHtml = await renderPage(page);
 
   spawn('mkdir', '-p', page.outDirPath);
-  await fs.writeFile(path.join(page.outDirPath, 'index.html'), pageHtml, { encoding: 'utf8' });
+  await fs.writeFile(path.join(page.outDirPath, `${page.fileBase}.html`), pageHtml, { encoding: 'utf8' });
 }
 
 async function handleVersionTxt(config) {
@@ -338,6 +338,26 @@ function renderDateTime(date) {
 }
 
 async function main() {
+  const pages = [
+    {
+      title: 'Educational Game Club',
+      brief: `It's like a book club but for educational games. Each month we pick one, play it, and then meet to discuss it.`,
+      url: 'https://EducationalGameClub.com/',
+    
+      fileBase: 'index',
+      inDirPath: './content/',
+      outDirPath: './_gh-pages/',
+    },
+    {
+      title: 'Playing Geniventure',
+      brief: `Geniventure is designed for classroom use with an instructor so playing it on your own involves a few extra steps. This short guide explains how to get started.`,
+      url: 'https://EducationalGameClub.com/events/2025-06/play.html',
+    
+      fileBase: 'play',
+      inDirPath: './content/events/2025-06/',
+      outDirPath: './_gh-pages/events/2025-06/',
+    }
+  ];
   const events = [
     {
       title: 'Discussion of Portal',
@@ -416,26 +436,35 @@ async function main() {
       callUrl: 'https://meet.google.com/ktw-hccy-wgm',
       eventUrl: 'https://EducationalGameClub.com/events/2025-05/',
       image: { name: 'image.png', width: 1000, height: 525 },
-      // isPastEvent: true,
+      isPastEvent: true,
     
       inDirPath: './content/events/2025-05/',
       outDirPath: './_gh-pages/events/2025-05/',
+    },
+    {
+      uid: '85333bf3-909a-4326-9fd3-4aaeb456f89f',
+      title: 'Discussion of Geniventure',
+      brief: `We'll be discussing Geniventure by The Concord Consortium, a game where players learn about heredity, genetics, and the protein-to-trait relationship by breeding dragons. Designed for middle and high school students.`,
+      start: makeUtcDate(2025, 6, 27, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/kww-yhkj-bqc',
+      eventUrl: 'https://EducationalGameClub.com/events/2025-06/',
+      image: { name: 'image.jpg', width: 1460, height: 765 },
+      // isPastEvent: true,
+    
+      inDirPath: './content/events/2025-06/',
+      outDirPath: './_gh-pages/events/2025-06/',
     },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
   await handleVersionTxt({ outDirPath: './_gh-pages/' });
 
-  await handlePage({
-    title: 'Educational Game Club',
-    brief: `It's like a book club but for educational games. Each month we pick one, play it, and then meet to discuss it.`,
-    url: 'https://EducationalGameClub.com/',
-  
-    inDirPath: './content/',
-    outDirPath: './_gh-pages/',
-  });
+  for (const page of pages) {
+    await handlePage(page);
+  }
 
-  for (const evt of events)  {
+  for (const evt of events) {
     await handleEventPage(evt);
   }
 
