@@ -46,6 +46,13 @@ function gitHeadSha() {
   return spawn('git', 'rev-parse', 'HEAD').toString('utf8').trim();
 }
 
+function replaceVariables(s, variables) {
+  return Object.entries(variables).reduce(
+    (acc, [varName, varValue]) => acc.replaceAll(`$$${varName}$$`, varValue),
+    s
+  );
+}
+
 function calendarEventTitle(evt) {
   return 'Educational Game Club ' + evt.title;
 }
@@ -137,29 +144,25 @@ async function writeIcsFileIfChanged(filePath, ics) {
 }
 
 async function renderEventPage(evt) {
-  function replaceVariables(s, evt) {
-    return (
-      s
-        .replaceAll('$$EventUrl$$', evt.eventUrl)
-        .replaceAll('$$EventTitle$$', evt.title)
-        .replaceAll('$$EventBrief$$', evt.brief ?? '')
-        .replaceAll('$$PageTitle$$', pageTitle(evt))
-        .replaceAll('$$CallUrl$$', evt.callUrl)
-        .replaceAll('$$GoogleCalendarUrl$$', eventAddToGoogleCalendarUrl(evt))
-        .replaceAll('$$PastEventDisplay$$', evt.isPastEvent ? 'block' : 'none')
-        .replaceAll('$$ImageUrl$$', evt.image ? evt.eventUrl + evt.image.name : '')
-        .replaceAll('$$ImageWidth$$', evt.image ? evt.image.width : '')
-        .replaceAll('$$ImageHeight$$', evt.image ? evt.image.height : '')
-    );
-  }
+  const variables = {
+    TopMenu: evt.topMenu ?? '',
+    EventUrl: evt.eventUrl,
+    EventTitle: evt.title,
+    EventBrief: evt.brief ?? '',
+    PageTitle: pageTitle(evt),
+    CallUrl: evt.callUrl,
+    GoogleCalendarUrl: eventAddToGoogleCalendarUrl(evt),
+    PastEventDisplay: evt.isPastEvent ? 'block' : 'none',
+    ImageUrl: evt.image ? evt.eventUrl + evt.image.name : '',
+    ImageWidth: evt.image ? evt.image.width : '',
+    ImageHeight: evt.image ? evt.image.height : '',
+  };
 
   const template = await fs.readFile('./event-template.html', { encoding: 'utf8' });
   const eventBodyMarkdown = await fs.readFile(path.join(evt.inDirPath, 'index.md'), { encoding: 'utf8' });
-  const eventBodyHtml = marked.parse(replaceVariables(eventBodyMarkdown, evt));
+  const eventBodyHtml = marked.parse(replaceVariables(eventBodyMarkdown, variables));
 
-  return (
-    replaceVariables(template, evt).replaceAll('$$EventBody$$', eventBodyHtml)
-  );
+  return replaceVariables(template, { ...variables, EventBody: eventBodyHtml });
 }
 
 async function handleEventPage(evt) {
@@ -173,24 +176,20 @@ async function handleEventPage(evt) {
   }
 }
 
-
 async function renderPage(page) {
-  function replaceVariables(s, page) {
-    return (
-      s
-        .replaceAll('$$PageUrl$$', page.url)
-        .replaceAll('$$PageTitle$$', page.title)
-        .replaceAll('$$PageBrief$$', page.brief)
-    );
-  }
+  const variables = {
+    ...page.variables,
+
+    PageUrl: page.url,
+    PageTitle: page.title,
+    PageBrief: page.brief,
+  };
 
   const template = await fs.readFile('./page-template.html', { encoding: 'utf8' });
   const pageBodyMarkdown = await fs.readFile(path.join(page.inDirPath, `${page.fileBase}.md`), { encoding: 'utf8' });
-  const pageBodyHtml = marked.parse(replaceVariables(pageBodyMarkdown, page));
+  const pageBodyHtml = marked.parse(replaceVariables(pageBodyMarkdown, variables));
 
-  return (
-    replaceVariables(template, page).replaceAll('$$PageBody$$', pageBodyHtml)
-  );
+  return replaceVariables(template, { ...variables, PageBody: pageBodyHtml });
 }
 
 async function handlePage(page) {
@@ -337,26 +336,83 @@ function renderDateTime(date) {
   return renderDate(date) + ' ' + renderTime(date);
 }
 
+function renderTopMenu(items, selectedItemId=undefined) {
+  function renderMenuItem({id, label, url}) {
+    return (
+      id === selectedItemId ? `<li class="menu-selected">${label}</li>` :
+      `<li><a href="${url}">${label}</a></li>`
+    );
+  }
+
+  return `
+<style>
+  .top-menu {
+    font-size: 0.875rem;
+  }
+  .top-menu ul {
+    list-style: none;
+    padding: 0;
+    border: 0;
+    margin-left: 0; margin-right: 0; margin-top: 0;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: baseline;
+    column-gap: 1rem;
+  }
+  .top-menu .menu-selected {
+    font-weight: bold;
+    border-bottom: solid black 2px;
+  }
+</style>
+<nav class="top-menu">
+  <ul>
+  ${items.map(item => renderMenuItem(item)).join('\n')}
+  </ul>
+</nav>
+`;
+}
+
 async function main() {
+  const geniventureMenuItems = [
+    { id: 'event', label: 'Event', url: './index.html' },
+    { id: 'play', label: 'Play', url: './play.html' },
+    { id: 'hints', label: 'Hints', url: './hints.html' },
+  ];
+
   const pages = [
     {
       title: 'Educational Game Club',
       brief: `It's like a book club but for educational games. Each month we pick one, play it, and then meet to discuss it.`,
       url: 'https://EducationalGameClub.com/',
-    
+
       fileBase: 'index',
       inDirPath: './content/',
       outDirPath: './_gh-pages/',
     },
     {
       title: 'Playing Geniventure',
-      brief: `Geniventure is designed for classroom use with an instructor so playing it on your own involves a few extra steps. This short guide explains how to get started.`,
+      brief: `Geniventure is designed to be played in a classroom with an instructor so playing it on your own involves a few extra steps. This short guide explains how to get started.`,
       url: 'https://EducationalGameClub.com/events/2025-06/play.html',
-    
+      variables: {
+        TopMenu: renderTopMenu(geniventureMenuItems, 'play'),
+      },
+
       fileBase: 'play',
       inDirPath: './content/events/2025-06/',
       outDirPath: './_gh-pages/events/2025-06/',
-    }
+    },
+    {
+      title: 'Geniventure Hints',
+      brief: `Geniventure is designed to be played in a classroom with an instructor. This doc offers background normally provided by a teacher.`,
+      url: 'https://EducationalGameClub.com/events/2025-06/hints.html',
+      variables: {
+        TopMenu: renderTopMenu(geniventureMenuItems, 'hints'),
+      },
+
+      fileBase: 'hints',
+      inDirPath: './content/events/2025-06/',
+      outDirPath: './_gh-pages/events/2025-06/',
+    },
   ];
   const events = [
     {
@@ -367,11 +423,11 @@ async function main() {
       callUrl: 'https://meet.google.com/nyk-twnw-anu',
       eventUrl: 'https://EducationalGameClub.github.io/events/2024-12/',
       isPastEvent: true,
-    
+
       inDirPath: './content/events/2024-12/',
       outDirPath: './_gh-pages/events/2024-12/',
     },
-    
+
     {
       title: 'Discussion of Headlines and High Water',
       uid: 'a5K-9JBCcND-1KgQpiX6l',
@@ -380,7 +436,7 @@ async function main() {
       callUrl: 'https://meet.google.com/izp-ezjm-cyj',
       eventUrl: 'https://EducationalGameClub.github.io/events/2025-01/',
       isPastEvent: true,
-    
+
       inDirPath: './content/events/2025-01/',
       outDirPath: './_gh-pages/events/2025-01/',
     },
@@ -395,7 +451,7 @@ async function main() {
       eventUrl: 'https://EducationalGameClub.github.io/events/2025-02/',
       image: { name: 'image.png', width: 600, height: 337 },
       isPastEvent: true,
-    
+
       inDirPath: './content/events/2025-02/',
       outDirPath: './_gh-pages/events/2025-02/',
     },
@@ -409,7 +465,7 @@ async function main() {
       eventUrl: 'https://EducationalGameClub.com/events/2025-03/',
       image: { name: 'image.jpg', width: 800, height: 450 },
       isPastEvent: true,
-    
+
       inDirPath: './content/events/2025-03/',
       outDirPath: './_gh-pages/events/2025-03/',
     },
@@ -423,7 +479,7 @@ async function main() {
       eventUrl: 'https://EducationalGameClub.com/events/2025-04/',
       image: { name: 'image.jpg', width: 1920, height: 1008 },
       isPastEvent: true,
-    
+
       inDirPath: './content/events/2025-04/',
       outDirPath: './_gh-pages/events/2025-04/',
     },
@@ -437,7 +493,7 @@ async function main() {
       eventUrl: 'https://EducationalGameClub.com/events/2025-05/',
       image: { name: 'image.png', width: 1000, height: 525 },
       isPastEvent: true,
-    
+
       inDirPath: './content/events/2025-05/',
       outDirPath: './_gh-pages/events/2025-05/',
     },
@@ -450,8 +506,9 @@ async function main() {
       callUrl: 'https://meet.google.com/kww-yhkj-bqc',
       eventUrl: 'https://EducationalGameClub.com/events/2025-06/',
       image: { name: 'image.jpg', width: 1460, height: 765 },
+      topMenu: renderTopMenu(geniventureMenuItems, 'event'),
       // isPastEvent: true,
-    
+
       inDirPath: './content/events/2025-06/',
       outDirPath: './_gh-pages/events/2025-06/',
     },

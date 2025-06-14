@@ -39,7 +39,9 @@
 
 Based on [the poll results](https://discourse.educationalgameclub.com/t/poll-game-for-june-2025), we'll be discussing [Geniventure](./play.html) by [The Concord Consortium](https://concord.org/), a game where players breed dragons to learn about heredity, genetics, and the protein-to-trait relationship. Designed for middle and high school students.
 
-**[How to Play Geniventure](./play.html).** It's designed for classrooms so set up takes a few steps.
+The game is designed for classrooms so I've created a couple of guides to make things easier since we'll be playing independently:
+- **[How to Play Geniventure](./play.html).** Steps to set up the game.
+- **[Geniventure Hints](./hints.html).** Offers background normally provided by a teacher.
 
 Thoughts on the game before the event? Share them on 💬 [the forum](https://discourse.educationalgameclub.com/t/discussion-of-geniventure).
 
@@ -51,7 +53,7 @@ Thoughts on the game before the event? Share them on 💬 [the forum](https://di
 Questions? Comments? Email [EducationalGameClub@gmail.com](mailto:EducationalGameClub@gmail.com).
 
 ### About Geniventure
-[Geniventure](./play.html) is designed for use in a classroom with an instructor. It has an extensive set of teaching materials including:
+[Geniventure](./play.html) is designed to be played in a classroom with an instructor. It has an extensive set of teaching materials including:
 - [An online course for instructors](https://activity-player.concord.org/?runKey=bc54080b-ce6e-4382-88b2-35bc9cefc6dd&sequence=https%3A%2F%2Fauthoring.concord.org%2Fapi%2Fv1%2Fsequences%2F510.json&sequenceActivity=0&mode=teacher-edition) on how to teach using the game.
 - [Out-of-school time materials](https://learn.concord.org/geniventure-ost) which include hands-on activities and labs. They provide curriculum options for [one week](https://docs.google.com/document/d/1DlEP2coqseBthJ1y5mSgrma0sKV0XDkPSlfpJRLnsaY/edit?usp=sharing) and [six week](https://docs.google.com/document/d/1FDxVxgirydnMMfK6qK05JTyIB-y8GoTrLsgdzs0VHbs/edit?usp=sharing) programs.
 - A [pre-quiz](https://learn.concord.org/eresources/1113.run_resource_html?logging=true) and a [post-quiz](https://learn.concord.org/eresources/1112.run_resource_html?logging=true) to assess student understanding before and after playing the game.

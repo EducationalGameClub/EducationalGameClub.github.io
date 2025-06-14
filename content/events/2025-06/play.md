@@ -1,6 +1,8 @@
+$$TopMenu$$
+
 # Playing Geniventure
 
-<a target="_blank" href="https://learn.concord.org/geniventure">Geniventure</a> is designed for use in a classroom with an instructor so playing it on your own involves a few extra steps. This short guide explains how to get started.
+<a target="_blank" href="https://learn.concord.org/geniventure">Geniventure</a> is designed to be played in a classroom with an instructor so playing it on your own involves a few extra steps. This short guide explains how to get started.
 
 ## Options for Playing Geniventure
 
