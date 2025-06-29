@@ -532,7 +532,10 @@ async function main() {
   });
 
   const messages = [
-    `${style([ANSI.bright], nextEvent.title)} (next event)`,
+    (
+      !nextEvent.isPastEvent ? `${style([ANSI.bright], nextEvent.title)} (next event)` :
+      `${style([ANSI.fgRed, ANSI.bright], 'No next event')}`
+    )
   ];
 
   if (gitHasLocalChanges()) {
