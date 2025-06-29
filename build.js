@@ -507,7 +507,7 @@ async function main() {
       eventUrl: 'https://EducationalGameClub.com/events/2025-06/',
       image: { name: 'image.jpg', width: 1460, height: 765 },
       topMenu: renderTopMenu(geniventureMenuItems, 'event'),
-      // isPastEvent: true,
+      isPastEvent: true,
 
       inDirPath: './content/events/2025-06/',
       outDirPath: './_gh-pages/events/2025-06/',
