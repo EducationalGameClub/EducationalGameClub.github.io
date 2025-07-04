@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:5093b441-911c-4b83-a54a-e9dae7c26626
+SUMMARY:Educational Game Club Playtest & Discussion of Rogue Story
+DTSTAMP:20250703T191531Z
+DTSTART:20250725T010000Z
+DESCRIPTION:Join video call: https://meet.google.com/eqn-brbn-cpu\n\nEvent 
+	details: https://EducationalGameClub.com/events/2025-07/
+URL:https://educationalgameclub.com/events/2025-07/
+LOCATION:https://meet.google.com/eqn-brbn-cpu
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
