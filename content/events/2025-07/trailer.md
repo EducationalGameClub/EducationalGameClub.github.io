@@ -1,3 +1,9 @@
+<style>
+  .markdown-body h1 {
+    margin-bottom: 1rem;
+  }
+</style>
+
 $$TopMenu$$
 
 # Rogue Story Trailer
