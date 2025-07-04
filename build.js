@@ -147,9 +147,9 @@ async function renderEventPage(evt) {
   const variables = {
     TopMenu: evt.topMenu ?? '',
     EventUrl: evt.eventUrl,
-    EventTitle: evt.title,
+    EventTitle: evt.title.replaceAll('&', '&amp;'),
     EventBrief: evt.brief ?? '',
-    PageTitle: pageTitle(evt),
+    PageTitle: pageTitle(evt).replaceAll('&', '&amp;'),
     CallUrl: evt.callUrl,
     GoogleCalendarUrl: eventAddToGoogleCalendarUrl(evt),
     PastEventDisplay: evt.isPastEvent ? 'block' : 'none',
@@ -378,6 +378,11 @@ async function main() {
     { id: 'play', label: 'Play', url: './play.html' },
     { id: 'hints', label: 'Hints', url: './hints.html' },
   ];
+  const rogueStoryMenuItems = [
+    { id: 'event', label: 'Event', url: './index.html' },
+    { id: 'trailer', label: 'Trailer', url: './trailer.html' },
+    { id: 'play', label: 'Play', url: './play.html' },
+  ];
 
   const pages = [
     {
@@ -412,6 +417,30 @@ async function main() {
       fileBase: 'hints',
       inDirPath: './content/events/2025-06/',
       outDirPath: './_gh-pages/events/2025-06/',
+    },
+    {
+      title: 'Rogue Story Trailer',
+      brief: `Trailer for François Boucher-Genesse's early-stage prototype of Rogue Story.`,
+      url: 'https://EducationalGameClub.com/events/2025-07/trailer.html',
+      variables: {
+        TopMenu: renderTopMenu(rogueStoryMenuItems, 'trailer'),
+      },
+
+      fileBase: 'trailer',
+      inDirPath: './content/events/2025-07/',
+      outDirPath: './_gh-pages/events/2025-07/',
+    },
+    {
+      title: 'Play Rogue Story',
+      brief: `Instructions for playing François Boucher-Genesse's early-stage prototype of Rogue Story.`,
+      url: 'https://EducationalGameClub.com/events/2025-07/play.html',
+      variables: {
+        TopMenu: renderTopMenu(rogueStoryMenuItems, 'play'),
+      },
+
+      fileBase: 'play',
+      inDirPath: './content/events/2025-07/',
+      outDirPath: './_gh-pages/events/2025-07/',
     },
   ];
   const events = [
@@ -514,6 +543,22 @@ async function main() {
     },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
+
+  await handleEventPage({
+    uid: '5093b441-911c-4b83-a54a-e9dae7c26626',
+    title: 'Playtest & Discussion of Rogue Story',
+    brief: `We'll be playtesting and discussing Rogue Story, an early-stage prototype by François Boucher-Genesse. He'll be in attendance and interested in our feedback and ideas about improving the game. A particular focus will be critiquing how the game teaches the player new mechanics.`,
+    start: makeUtcDate(2025, 7, 25, 1),
+    duration: { hours: 1, minutes: 30 },
+    callUrl: 'https://meet.google.com/eqn-brbn-cpu',
+    eventUrl: 'https://EducationalGameClub.com/events/2025-07/',
+    image: { name: 'image.jpg', width: 1200, height: 623 },
+    topMenu: renderTopMenu(rogueStoryMenuItems, 'event'),
+    // isPastEvent: true,
+
+    inDirPath: './content/events/2025-07/',
+    outDirPath: './_gh-pages/events/2025-07/',
+  });
 
   await handleVersionTxt({ outDirPath: './_gh-pages/' });
 
