@@ -26,6 +26,23 @@ function assert(pred, msg) {
   }
 }
 
+// Escapes text so it's safe to use in:
+//   - HTML contexts (e.g. <div>TEXT</div>)
+//   - HTML attribute value contexts (e.g. <div class="TEXT"></div>)
+//
+// The list is from:
+//   https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#output-encoding-for-html-contexts
+function escapeHtml(text) {
+  return (
+    text
+      .replaceAll('&', '&amp;')
+      .replaceAll('<', '&lt;')
+      .replaceAll('>', '&gt;')
+      .replaceAll('"', '&quot;')
+      .replaceAll('\'', '&#x27;')
+  );
+}
+
 function spawn2(command, args, options) {
   const result = child_process.spawnSync(command, args, options);
   if (result.status !== 0) {
@@ -147,9 +164,9 @@ async function renderEventPage(evt) {
   const variables = {
     TopMenu: evt.topMenu ?? '',
     EventUrl: evt.eventUrl,
-    EventTitle: evt.title.replaceAll('&', '&amp;'),
+    EventTitle: escapeHtml(evt.title),
     EventBrief: evt.brief ?? '',
-    PageTitle: pageTitle(evt).replaceAll('&', '&amp;'),
+    PageTitle: escapeHtml(pageTitle(evt)),
     CallUrl: evt.callUrl,
     GoogleCalendarUrl: eventAddToGoogleCalendarUrl(evt),
     PastEventDisplay: evt.isPastEvent ? 'block' : 'none',
