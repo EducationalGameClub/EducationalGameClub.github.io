@@ -382,6 +382,7 @@ async function main() {
     { id: 'event', label: 'Event', url: './index.html' },
     { id: 'trailer', label: 'Trailer', url: './trailer.html' },
     { id: 'play', label: 'Play', url: './play.html' },
+    { id: 'feedback', label: 'Feedback', url: './feedback.html' },
   ];
 
   const pages = [
@@ -439,6 +440,18 @@ async function main() {
       },
 
       fileBase: 'play',
+      inDirPath: './content/events/2025-07/',
+      outDirPath: './_gh-pages/events/2025-07/',
+    },
+    {
+      title: 'Provide Feedback on Rogue Story',
+      brief: `Options for providing feedback on François Boucher-Genesse's early-stage prototype of Rogue Story.`,
+      url: 'https://EducationalGameClub.com/events/2025-07/feedback.html',
+      variables: {
+        TopMenu: renderTopMenu(rogueStoryMenuItems, 'feedback'),
+      },
+
+      fileBase: 'feedback',
       inDirPath: './content/events/2025-07/',
       outDirPath: './_gh-pages/events/2025-07/',
     },
