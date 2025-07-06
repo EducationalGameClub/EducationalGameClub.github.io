@@ -41,7 +41,7 @@ We'll be playtesting and discussing [Rogue Story](./play.html), an early-stage p
 
 Genre-wise, it's a story telling roguelike deckbuilder (think *Balatro*). [Watch the trailer](./trailer.html) to get a feel for it.
 
-**Have gameplay feedback?** Share it on 💬 [the forum](https://discourse.educationalgameclub.com/) or fill out [this survey](https://docs.google.com/forms/d/e/1FAIpQLSc8qfHBqnxP3SwaThG-PgaDxwYtdvhCe7VVv-6B4-dw-cDhtA/viewform?usp=sf_link).
+**Have gameplay feedback?** Share it on 💬 [the forum](https://discourse.educationalgameclub.com/t/playtest-discussion-of-rogue-story) or fill out [this survey](https://docs.google.com/forms/d/e/1FAIpQLSc8qfHBqnxP3SwaThG-PgaDxwYtdvhCe7VVv-6B4-dw-cDhtA/viewform?usp=sf_link).
 
 ### Housekeeping
 - Playing the game before the event is encouraged but not required. The event is dedicated to discussion, with someone playing live so we can reference gameplay as needed.

@@ -12,5 +12,5 @@ $$TopMenu$$
     - **If the game is taking a while to start,** don't worry&mdash;the first launch can sometimes take a few minutes. Windows may be running a quick security scan in the background (via *Microsoft Defender*). Once that's done, the game will launch.
 5. **Want to share feedback?** A few options:
     - Fill out [this survey](https://docs.google.com/forms/d/e/1FAIpQLSc8qfHBqnxP3SwaThG-PgaDxwYtdvhCe7VVv-6B4-dw-cDhtA/viewform?usp=sf_link)
-    - Share your thoughts on 💬 [the forum](https://discourse.educationalgameclub.com/)
+    - Share your thoughts on 💬 [the forum](https://discourse.educationalgameclub.com/t/playtest-discussion-of-rogue-story)
     - Record your gameplay and post it to YouTube
