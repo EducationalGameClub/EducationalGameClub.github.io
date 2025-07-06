@@ -571,24 +571,23 @@ async function main() {
       inDirPath: './content/events/2025-06/',
       outDirPath: './_gh-pages/events/2025-06/',
     },
+    {
+      uid: '5093b441-911c-4b83-a54a-e9dae7c26626',
+      title: 'Playtest & Discussion of Rogue Story',
+      brief: `We'll be playtesting and discussing Rogue Story, an early-stage prototype by François Boucher-Genesse. He'll be in attendance and interested in our feedback and ideas about improving the game. A particular focus will be critiquing how the game teaches the player new mechanics.`,
+      start: makeUtcDate(2025, 7, 25, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/eqn-brbn-cpu',
+      eventUrl: 'https://EducationalGameClub.com/events/2025-07/',
+      image: { name: 'image.jpg', width: 1200, height: 623 },
+      topMenu: renderTopMenu(rogueStoryMenuItems, 'event'),
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2025-07/',
+      outDirPath: './_gh-pages/events/2025-07/',
+    }
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
-
-  await handleEventPage({
-    uid: '5093b441-911c-4b83-a54a-e9dae7c26626',
-    title: 'Playtest & Discussion of Rogue Story',
-    brief: `We'll be playtesting and discussing Rogue Story, an early-stage prototype by François Boucher-Genesse. He'll be in attendance and interested in our feedback and ideas about improving the game. A particular focus will be critiquing how the game teaches the player new mechanics.`,
-    start: makeUtcDate(2025, 7, 25, 1),
-    duration: { hours: 1, minutes: 30 },
-    callUrl: 'https://meet.google.com/eqn-brbn-cpu',
-    eventUrl: 'https://EducationalGameClub.com/events/2025-07/',
-    image: { name: 'image.jpg', width: 1200, height: 623 },
-    topMenu: renderTopMenu(rogueStoryMenuItems, 'event'),
-    // isPastEvent: true,
-
-    inDirPath: './content/events/2025-07/',
-    outDirPath: './_gh-pages/events/2025-07/',
-  });
 
   await handleVersionTxt({ outDirPath: './_gh-pages/' });
 
