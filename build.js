@@ -581,11 +581,25 @@ async function main() {
       eventUrl: 'https://EducationalGameClub.com/events/2025-07/',
       image: { name: 'image.jpg', width: 1200, height: 623 },
       topMenu: renderTopMenu(rogueStoryMenuItems, 'event'),
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2025-07/',
       outDirPath: './_gh-pages/events/2025-07/',
-    }
+    },
+    {
+      uid: '37a5da94-3d47-48c0-98a3-84bd113c2f72',
+      title: 'Discussion of Stick and Split',
+      brief: `We'll be discussing Stick and Split by Maypole Education, a math game that helps children understand what multiplication and division really mean rather than merely memorizing their times tables.`,
+      start: makeUtcDate(2025, 8, 29, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/tds-upgk-uyu',
+      eventUrl: 'https://EducationalGameClub.com/events/2025-08/',
+      image: { name: 'image.jpeg', width: 955, height: 500 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2025-08/',
+      outDirPath: './_gh-pages/events/2025-08/',
+    },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
