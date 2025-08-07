@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:37a5da94-3d47-48c0-98a3-84bd113c2f72
+SUMMARY:Educational Game Club Discussion of Stick and Split
+DTSTAMP:20250807T180738Z
+DTSTART:20250829T010000Z
+DESCRIPTION:Join video call: https://meet.google.com/tds-upgk-uyu\n\nEvent 
+	details: https://EducationalGameClub.com/events/2025-08/
+URL:https://educationalgameclub.com/events/2025-08/
+LOCATION:https://meet.google.com/tds-upgk-uyu
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
