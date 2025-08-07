@@ -30,19 +30,19 @@ Each month, we pick an educational game, play it, and then meet to discuss it. I
   </div>
 </div>
 
-<div class="emoji-paragraph">
+<!-- <div class="emoji-paragraph">
   <div class="emoji">📅&nbsp;</div>
   <div class="description">
     <a href="https://discourse.educationalgameclub.com/t/poll-game-for-august-2025">Cast your vote</a> on the game we'll discuss in August.
   </div>
-</div>
+</div> -->
 
-<!-- <div class="emoji-paragraph">
+<div class="emoji-paragraph">
   <div class="emoji">📅&nbsp;</div>
   <div class="description">
     Check out <a href="/events/next">our next event</a>.
   </div>
-</div> -->
+</div>
 
 <div style="opacity: 0.65; margin-top: 50px;">
   <h2>Past Events</h2>
