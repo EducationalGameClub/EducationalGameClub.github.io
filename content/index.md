@@ -47,6 +47,7 @@ Each month, we pick an educational game, play it, and then meet to discuss it. I
 <div style="opacity: 0.65; margin-top: 50px;">
   <h2>Past Events</h2>
   <ul>
+    <li><a href="/events/2025-08/">Discussion of Stick and Split</a> (August 2025)</li>
     <li><a href="/events/2025-07/">Playtest & Discussion of Rogue Story</a> (July 2025)</li>
     <li><a href="/events/2025-06/">Discussion of Geniventure</a> (June 2025)</li>
     <li><a href="/events/2025-05/">Discussion of Slice Fractions</a> (May 2025)</li>

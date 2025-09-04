@@ -595,10 +595,24 @@ async function main() {
       callUrl: 'https://meet.google.com/tds-upgk-uyu',
       eventUrl: 'https://EducationalGameClub.com/events/2025-08/',
       image: { name: 'image.jpeg', width: 955, height: 500 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2025-08/',
       outDirPath: './_gh-pages/events/2025-08/',
+    },
+    {
+      uid: '996cb770-55c6-4610-ac89-762ca165e6bb',
+      title: 'Discussion of Human Resource Machine',
+      brief: `We'll be discussing Human Resource Machine by Tomorrow Corporation, a puzzle game about programming little office workers. It starts with just two commands and gradually builds to more complex concepts.`,
+      start: makeUtcDate(2025, 9, 18, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/vyg-jhik-tff',
+      eventUrl: 'https://EducationalGameClub.com/events/2025-09/',
+      image: { name: 'image.png', width: 1200, height: 630 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2025-09/',
+      outDirPath: './_gh-pages/events/2025-09/',
     },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
