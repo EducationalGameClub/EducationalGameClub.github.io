@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:996cb770-55c6-4610-ac89-762ca165e6bb
+SUMMARY:Educational Game Club Discussion of Human Resource Machine
+DTSTAMP:20250904T004020Z
+DTSTART:20250918T010000Z
+DESCRIPTION:Join video call: https://meet.google.com/vyg-jhik-tff\n\nEvent 
+	details: https://EducationalGameClub.com/events/2025-09/
+URL:https://educationalgameclub.com/events/2025-09/
+LOCATION:https://meet.google.com/vyg-jhik-tff
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
