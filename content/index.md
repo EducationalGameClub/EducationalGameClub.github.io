@@ -30,6 +30,13 @@ Each month, we pick an educational game, play it, and then meet to discuss it. I
   </div>
 </div>
 
+<div class="emoji-paragraph">
+  <div class="emoji">📅&nbsp;</div>
+  <div class="description">
+    <b>The next event</b> will take place in October and will be announced soon.
+  </div>
+</div>
+
 <!-- <div class="emoji-paragraph">
   <div class="emoji">📅&nbsp;</div>
   <div class="description">
@@ -37,16 +44,17 @@ Each month, we pick an educational game, play it, and then meet to discuss it. I
   </div>
 </div> -->
 
-<div class="emoji-paragraph">
+<!-- <div class="emoji-paragraph">
   <div class="emoji">📅&nbsp;</div>
   <div class="description">
     Check out <a href="/events/next">our next event</a>.
   </div>
-</div>
+</div> -->
 
 <div style="opacity: 0.65; margin-top: 50px;">
   <h2>Past Events</h2>
   <ul>
+    <li><a href="/events/2025-09/">Discussion of Human Resource Machine</a> (September 2025)</li>
     <li><a href="/events/2025-08/">Discussion of Stick and Split</a> (August 2025)</li>
     <li><a href="/events/2025-07/">Playtest & Discussion of Rogue Story</a> (July 2025)</li>
     <li><a href="/events/2025-06/">Discussion of Geniventure</a> (June 2025)</li>

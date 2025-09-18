@@ -609,7 +609,7 @@ async function main() {
       callUrl: 'https://meet.google.com/vyg-jhik-tff',
       eventUrl: 'https://EducationalGameClub.com/events/2025-09/',
       image: { name: 'image.png', width: 1200, height: 630 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2025-09/',
       outDirPath: './_gh-pages/events/2025-09/',
