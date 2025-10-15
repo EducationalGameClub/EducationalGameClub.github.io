@@ -614,6 +614,20 @@ async function main() {
       inDirPath: './content/events/2025-09/',
       outDirPath: './_gh-pages/events/2025-09/',
     },
+    {
+      uid: 'a6a08de3-7754-4071-844e-f37c69a78843',
+      title: 'Discussion of Zoombinis',
+      brief: `We'll be discussing Zoombinis (2015) by TERC, a puzzle game that emphasizes logical reasoning. Solving puzzles requires the player to develop theories, test them, collect evidence based on their successes and failures, and then refine those theories.`,
+      start: makeUtcDate(2025, 10, 23, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/fof-xxak-khz',
+      eventUrl: 'https://EducationalGameClub.com/events/2025-10/',
+      image: { name: 'image.jpg', width: 821, height: 430 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2025-10/',
+      outDirPath: './_gh-pages/events/2025-10/',
+    },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
