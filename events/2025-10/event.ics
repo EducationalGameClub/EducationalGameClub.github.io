@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:a6a08de3-7754-4071-844e-f37c69a78843
+SUMMARY:Educational Game Club Discussion of Zoombinis
+DTSTAMP:20251015T230934Z
+DTSTART:20251023T010000Z
+DESCRIPTION:Join video call: https://meet.google.com/fof-xxak-khz\n\nEvent 
+	details: https://EducationalGameClub.com/events/2025-10/
+URL:https://educationalgameclub.com/events/2025-10/
+LOCATION:https://meet.google.com/fof-xxak-khz
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
