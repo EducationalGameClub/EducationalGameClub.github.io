@@ -623,7 +623,7 @@ async function main() {
       callUrl: 'https://meet.google.com/fof-xxak-khz',
       eventUrl: 'https://EducationalGameClub.com/events/2025-10/',
       image: { name: 'image.jpg', width: 821, height: 430 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2025-10/',
       outDirPath: './_gh-pages/events/2025-10/',
