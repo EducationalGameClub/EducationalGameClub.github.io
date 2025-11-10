@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:b7261394-d23b-485d-86ca-215ca9ffc7e8
+SUMMARY:Educational Game Club Discussion of Socrates Jones
+DTSTAMP:20251108T204109Z
+DTSTART:20251121T020000Z
+DESCRIPTION:Join video call: https://meet.google.com/tcm-eyhu-ode\n\nEvent 
+	details: https://EducationalGameClub.com/events/2025-11/
+URL:https://educationalgameclub.com/events/2025-11/
+LOCATION:https://meet.google.com/tcm-eyhu-ode
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
