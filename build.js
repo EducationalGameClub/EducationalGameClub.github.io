@@ -628,6 +628,20 @@ async function main() {
       inDirPath: './content/events/2025-10/',
       outDirPath: './_gh-pages/events/2025-10/',
     },
+    {
+      uid: 'b7261394-d23b-485d-86ca-215ca9ffc7e8',
+      title: 'Discussion of Socrates Jones',
+      brief: `We'll be discussing Socrates Jones: Pro Philosopher (2013), a game about critical thinking and philosophy. Players explore the nature of morality by debating historical philosophers, from Euthyphro to John Stuart Mill.`,
+      start: makeUtcDate(2025, 11, 21, 2),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/tcm-eyhu-ode',
+      eventUrl: 'https://EducationalGameClub.com/events/2025-11/',
+      image: { name: 'image.jpg', width: 616, height: 323 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2025-11/',
+      outDirPath: './_gh-pages/events/2025-11/',
+    },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
