@@ -52,7 +52,7 @@ Questions? Comments? Email [EducationalGameClub@gmail.com](mailto:EducationalGa
 [Socrates Jones](https://store.steampowered.com/app/2120060/Socrates_Jones_Pro_Philosopher/) was primarily developed by Connor Fallon and Valeria Reznitskaya with advice from Andy Norman, a philosophy professor at Carnegie Mellon University. It takes inspiration from Andy's [reason-giving game](https://www.academia.edu/4269933/How_to_Play_the_Reason_Giving_Game), a model he developed for rational discourse. It borrows mechanics from the courtroom trial game [Ace Attorney](https://en.wikipedia.org/wiki/Ace_Attorney) and applies them to philosophical debate.
 
 The game's primary developers published **reflections about the game's design**:
-- [Making a Debate Game: the Design Challenges of Socrates Jones](https://www.gamedeveloper.com/design/making-a-debate-game-the-design-challenges-of-socrates-jones) by Connor Fallon (2013)
+- [Making a Debate Game: The Design Challenges of Socrates Jones](https://www.gamedeveloper.com/design/making-a-debate-game-the-design-challenges-of-socrates-jones) by Connor Fallon (2013)
 - [Socrates Jones: Education and Hobbyist Game Design](https://www.gamedeveloper.com/design/socrates-jones-education-and-hobbyist-game-design) by Valeria Reznitskaya (2013)
 
 [The Wikipedia page for *Socrates Jones*](https://en.wikipedia.org/wiki/Socrates_Jones:_Pro_Philosopher) is another good source about the game's origins and design.
