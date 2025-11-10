@@ -57,7 +57,7 @@ The game's primary developers published **reflections about the game's design**:
 
 [The Wikipedia page for *Socrates Jones*](https://en.wikipedia.org/wiki/Socrates_Jones:_Pro_Philosopher) is another good source about the game's origins and design.
 
-The sequel to *Socrates Jones*, [Pro Philosopher 2: Governments & Grievances (2024)](https://store.steampowered.com/app/2120070/Pro_Philosopher_2_Governments__Grievances/), uses the same format to explore various foundational political ideas. Through playtesting, they discovered that [the most difficult chapter tended to be the debate against the political ideas that the player agreed with the most](https://www.gamedeveloper.com/design/lessons-from-the-political-minefield-of-pro-philosopher-2)!
+The sequel to *Socrates Jones*, [Pro Philosopher 2: Governments & Grievances (2024)](https://store.steampowered.com/app/2120070/Pro_Philosopher_2_Governments__Grievances/), uses the same format to explore various foundational political ideas. Through playtesting, they discovered [the most difficult chapter was often the debate against the ideas the player agreed with the most](https://www.gamedeveloper.com/design/lessons-from-the-political-minefield-of-pro-philosopher-2)!
 
 ### About Educational Game Club
 It’s like a book club but for educational games. Each month we pick one, play it, and then meet to discuss it.
