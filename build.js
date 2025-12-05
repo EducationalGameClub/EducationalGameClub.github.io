@@ -644,7 +644,7 @@ async function main() {
     },
     {
       uid: '47d82568-0596-4c98-9b37-f711844eeb81',
-      title: 'Discussion of Alba',
+      title: 'Discussion of Alba: A Wildlife Adventure',
       brief: `We'll be discussing Alba: A Wildlife Adventure (2020), a game about exploring an island, rescuing its wildlife, and restoring the local nature reserve.`,
       start: makeUtcDate(2025, 12, 17, 2),
       duration: { hours: 1, minutes: 30 },

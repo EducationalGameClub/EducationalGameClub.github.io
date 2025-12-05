@@ -39,7 +39,7 @@
 
 We'll be discussing [Alba: A Wildlife Adventure (2020)](https://store.steampowered.com/app/1337010/Alba_A_Wildlife_Adventure/) by [ustwo games](https://ustwo.com/), a game about exploring an island, rescuing its wildlife, and restoring the local nature reserve. It won a [2021 Apple Design Award for Social Impact](https://www.apple.com/newsroom/2021/06/apple-announces-winners-of-the-2021-apple-design-awards/).
 
-Thoughts on the game before the event? Share them on 💬 [the forum](https://discourse.educationalgameclub.com/t/discussion-of-alba).
+Thoughts on the game before the event? Share them on 💬 [the forum](https://discourse.educationalgameclub.com/t/discussion-of-alba-a-wildlife-adventure).
 
 ### Housekeeping
 - Playing the game before the event is encouraged but not required. The event is dedicated to discussion.
