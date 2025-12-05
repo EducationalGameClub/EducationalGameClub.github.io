@@ -637,10 +637,24 @@ async function main() {
       callUrl: 'https://meet.google.com/tcm-eyhu-ode',
       eventUrl: 'https://EducationalGameClub.com/events/2025-11/',
       image: { name: 'image.jpg', width: 616, height: 323 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2025-11/',
       outDirPath: './_gh-pages/events/2025-11/',
+    },
+    {
+      uid: '47d82568-0596-4c98-9b37-f711844eeb81',
+      title: 'Discussion of Alba',
+      brief: `We'll be discussing Alba: A Wildlife Adventure (2020), a game about exploring an island, rescuing its wildlife, and restoring the local nature reserve.`,
+      start: makeUtcDate(2025, 12, 17, 2),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/avj-fwwj-jcv',
+      eventUrl: 'https://EducationalGameClub.com/events/2025-12/',
+      image: { name: 'image.jpg', width: 1200, height: 628 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2025-12/',
+      outDirPath: './_gh-pages/events/2025-12/',
     },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
