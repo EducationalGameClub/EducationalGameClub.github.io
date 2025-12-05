@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:47d82568-0596-4c98-9b37-f711844eeb81
+SUMMARY:Educational Game Club Discussion of Alba: A Wildlife Adventure
+DTSTAMP:20251205T095150Z
+DTSTART:20251217T020000Z
+DESCRIPTION:Join video call: https://meet.google.com/avj-fwwj-jcv\n\nEvent 
+	details: https://EducationalGameClub.com/events/2025-12/
+URL:https://educationalgameclub.com/events/2025-12/
+LOCATION:https://meet.google.com/avj-fwwj-jcv
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
