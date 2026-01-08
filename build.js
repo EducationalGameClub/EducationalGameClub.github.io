@@ -651,10 +651,24 @@ async function main() {
       callUrl: 'https://meet.google.com/avj-fwwj-jcv',
       eventUrl: 'https://EducationalGameClub.com/events/2025-12/',
       image: { name: 'image.jpg', width: 1200, height: 628 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2025-12/',
       outDirPath: './_gh-pages/events/2025-12/',
+    },
+    {
+      uid: 'd405a58b-22f0-468a-b716-8d8f4889a9b8',
+      title: 'Discussion of Beats Empire',
+      brief: `We'll be discussing Beats Empire (2019), a game about running a music studio: analyze trends and help artists reach the top of the charts. The game is designed to assess data analysis skills (rather than teach them) in middle schools, aligned with widely used US K-12 standards.`,
+      start: makeUtcDate(2026, 1, 22, 2),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/hsx-ayrr-abd',
+      eventUrl: 'https://EducationalGameClub.com/events/2026-01/',
+      image: { name: 'image.png', width: 1200, height: 630 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2026-01/',
+      outDirPath: './_gh-pages/events/2026-01/',
     },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
