@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:d405a58b-22f0-468a-b716-8d8f4889a9b8
+SUMMARY:Educational Game Club Discussion of Beats Empire
+DTSTAMP:20260104T021423Z
+DTSTART:20260122T020000Z
+DESCRIPTION:Join video call: https://meet.google.com/hsx-ayrr-abd\n\nEvent 
+	details: https://EducationalGameClub.com/events/2026-01/
+URL:https://educationalgameclub.com/events/2026-01/
+LOCATION:https://meet.google.com/hsx-ayrr-abd
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
