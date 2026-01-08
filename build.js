@@ -664,7 +664,7 @@ async function main() {
       duration: { hours: 1, minutes: 30 },
       callUrl: 'https://meet.google.com/hsx-ayrr-abd',
       eventUrl: 'https://EducationalGameClub.com/events/2026-01/',
-      image: { name: 'image.png', width: 1200, height: 630 },
+      image: { name: 'image.jpg', width: 1200, height: 630 },
       // isPastEvent: true,
   
       inDirPath: './content/events/2026-01/',
