@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:950f567b-269e-4ba4-aa9f-bc1659b23dd5
+SUMMARY:Educational Game Club Discussion of Investigation Declaration
+DTSTAMP:20260205T024406Z
+DTSTART:20260220T020000Z
+DESCRIPTION:Join video call: https://meet.google.com/han-cejx-wjv\n\nEvent 
+	details: https://EducationalGameClub.com/events/2026-02/
+URL:https://educationalgameclub.com/events/2026-02/
+LOCATION:https://meet.google.com/han-cejx-wjv
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
