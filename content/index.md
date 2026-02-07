@@ -55,7 +55,7 @@ Each month, we pick an educational game, play it, and then meet to discuss it. I
   <h2>Past Events</h2>
   <ul>
     <li><a href="/events/2026-01/">Discussion of Beats Empire</a> (Jan 2026)</li>
-    <li><a href="/events/2025-11/">Discussion of Alba: A Wildlife Adventure</a> (Dec 2025)</li>
+    <li><a href="/events/2025-12/">Discussion of Alba: A Wildlife Adventure</a> (Dec 2025)</li>
     <li><a href="/events/2025-11/">Discussion of Socrates Jones</a> (Nov 2025)</li>
     <li><a href="/events/2025-10/">Discussion of Zoombinis</a> (Oct 2025)</li>
     <li><a href="/events/2025-09/">Discussion of Human Resource Machine</a> (Sep 2025)</li>
