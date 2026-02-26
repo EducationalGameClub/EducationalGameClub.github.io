@@ -54,6 +54,7 @@ Each month, we pick an educational game, play it, and then meet to discuss it. I
 <div style="opacity: 0.65; margin-top: 50px;">
   <h2>Past Events</h2>
   <ul>
+    <li><a href="/events/2026-02/">Discussion of Investigation Declaration</a> (Feb 2026)</li>
     <li><a href="/events/2026-01/">Discussion of Beats Empire</a> (Jan 2026)</li>
     <li><a href="/events/2025-12/">Discussion of Alba: A Wildlife Adventure</a> (Dec 2025)</li>
     <li><a href="/events/2025-11/">Discussion of Socrates Jones</a> (Nov 2025)</li>

@@ -679,10 +679,24 @@ async function main() {
       callUrl: 'https://meet.google.com/han-cejx-wjv',
       eventUrl: 'https://EducationalGameClub.com/events/2026-02/',
       image: { name: 'image.jpg', width: 842, height: 440 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2026-02/',
       outDirPath: './_gh-pages/events/2026-02/',
+    },
+    {
+      uid: 'c029f388-8b57-48d1-9c5b-521db663785a',
+      title: 'Discussion of Wake: Tales from the Aqualab',
+      brief: `We'll be discussing Wake: Tales from the Aqualab (2023) by Field Day. Play as a young scientist exploring ocean ecosystems and conducting experiments based on real research.`,
+      start: makeUtcDate(2026, 3, 26, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/utd-vvnh-ojk',
+      eventUrl: 'https://EducationalGameClub.com/events/2026-03/',
+      image: { name: 'image.jpg', width: 1200, height: 630 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2026-03/',
+      outDirPath: './_gh-pages/events/2026-03/',
     },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
