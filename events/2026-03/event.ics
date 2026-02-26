@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:c029f388-8b57-48d1-9c5b-521db663785a
+SUMMARY:Educational Game Club Discussion of Wake: Tales from the Aqualab
+DTSTAMP:20260226T071226Z
+DTSTART:20260326T010000Z
+DESCRIPTION:Join video call: https://meet.google.com/utd-vvnh-ojk\n\nEvent 
+	details: https://EducationalGameClub.com/events/2026-03/
+URL:https://educationalgameclub.com/events/2026-03/
+LOCATION:https://meet.google.com/utd-vvnh-ojk
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
