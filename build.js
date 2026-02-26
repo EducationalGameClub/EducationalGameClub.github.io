@@ -703,6 +703,7 @@ async function main() {
 
   await handleVersionTxt({ outDirPath: './_gh-pages/' });
 
+  await fs.copyFile('./content/suggestions.html', './_gh-pages/suggestions.html');
   await fs.copyFile('./content/collider2026.html', './_gh-pages/collider2026.html');
 
   for (const page of pages) {
