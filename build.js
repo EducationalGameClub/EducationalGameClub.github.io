@@ -693,7 +693,7 @@ async function main() {
       callUrl: 'https://meet.google.com/utd-vvnh-ojk',
       eventUrl: 'https://EducationalGameClub.com/events/2026-03/',
       image: { name: 'image.jpg', width: 1200, height: 630 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2026-03/',
       outDirPath: './_gh-pages/events/2026-03/',
