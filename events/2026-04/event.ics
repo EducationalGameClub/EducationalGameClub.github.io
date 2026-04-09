@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:6da59407-c886-4ed0-80d5-abfe637abd9d
+SUMMARY:Educational Game Club Discussion of Duolingo
+DTSTAMP:20260405T201606Z
+DTSTART:20260429T010000Z
+DESCRIPTION:Join video call: https://meet.google.com/rao-jaeg-drb\n\nEvent 
+	details: https://EducationalGameClub.com/events/2026-04/
+URL:https://educationalgameclub.com/events/2026-04/
+LOCATION:https://meet.google.com/rao-jaeg-drb
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
