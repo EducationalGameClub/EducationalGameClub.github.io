@@ -698,6 +698,20 @@ async function main() {
       inDirPath: './content/events/2026-03/',
       outDirPath: './_gh-pages/events/2026-03/',
     },
+    {
+      uid: '6da59407-c886-4ed0-80d5-abfe637abd9d',
+      title: 'Discussion of Duolingo',
+      brief: `We'll be discussing Duolingo, one of the world's most popular educational apps. It includes lessons for learning 40+ languages, math, music, and chess.`,
+      start: makeUtcDate(2026, 4, 29, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://meet.google.com/rao-jaeg-drb',
+      eventUrl: 'https://EducationalGameClub.com/events/2026-04/',
+      image: { name: 'image.jpg', width: 1200, height: 630 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2026-04/',
+      outDirPath: './_gh-pages/events/2026-04/',
+    },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
