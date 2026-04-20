@@ -713,6 +713,7 @@ async function main() {
 
   const redirects = [
     { from: './_gh-pages/collider2026.html', to: 'https://docs.google.com/presentation/d/1yh-SdomGXLuTS94SJwDwckcNEONgKcPLGMnD32U7gyM/edit?usp=sharing' },
+    { from: './_gh-pages/wila-events.html', to: 'https://www.meetup.com/edtechseattle/events/' },
     { from: './_gh-pages/events/next.html', to: nextEvent.eventUrl },
     { from: './_gh-pages/suggestions.html', to: 'https://forms.gle/Sv7Y6ixNXw9oyFSc6' },
   ];
