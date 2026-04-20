@@ -160,6 +160,22 @@ async function writeIcsFileIfChanged(filePath, ics) {
   }
 }
 
+async function renderRedirectPage(config) {
+  const variables = {
+    RedirectUrl: config.to,
+  };
+
+  const template = await fs.readFile('./redirect-template.html', { encoding: 'utf8' });
+  return replaceVariables(template, variables);
+}
+
+async function handleRedirectPage(config) {
+  const outPath = config.from;
+  const pageHtml = await renderRedirectPage(config);
+
+  await fs.writeFile(outPath, pageHtml, { encoding: 'utf8' });
+}
+
 async function renderEventPage(evt) {
   const variables = {
     TopMenu: evt.topMenu ?? '',
@@ -715,10 +731,16 @@ async function main() {
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
+  const redirects = [
+    { from: './_gh-pages/collider2026.html', to: 'https://docs.google.com/presentation/d/1yh-SdomGXLuTS94SJwDwckcNEONgKcPLGMnD32U7gyM/edit?usp=sharing' },
+    { from: './_gh-pages/suggestions.html', to: 'https://forms.gle/Sv7Y6ixNXw9oyFSc6' },
+  ];
+
   await handleVersionTxt({ outDirPath: './_gh-pages/' });
 
-  await fs.copyFile('./content/suggestions.html', './_gh-pages/suggestions.html');
-  await fs.copyFile('./content/collider2026.html', './_gh-pages/collider2026.html');
+  for (const config of redirects) {
+    await handleRedirectPage(config);
+  }
 
   for (const page of pages) {
     await handlePage(page);
