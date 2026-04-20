@@ -240,26 +240,6 @@ async function handleVersionTxt(config) {
   );
 }
 
-async function renderNextEventPage(config) {
-  function replaceVariables(s, config) {
-    return (
-      s
-        .replaceAll('$$EventUrl$$', config.nextEvent.eventUrl)
-    );
-  }
-
-  const template = await fs.readFile('./next-event-template.html', { encoding: 'utf8' });
-  const pageHtml = replaceVariables(template, config);
-  return pageHtml;
-}
-
-async function handleNextEventPage(config) {
-  const pageHtml = await renderNextEventPage(config);
-
-  spawn('mkdir', '-p', path.dirname(config.outPath));
-  await fs.writeFile(config.outPath, pageHtml, { encoding: 'utf8' });
-}
-
 function renderAddToGoogleCalendarUrl(evt) {
   function pad2Digits(n) {
     return ('' + n).padStart(2, 0);
@@ -733,6 +713,7 @@ async function main() {
 
   const redirects = [
     { from: './_gh-pages/collider2026.html', to: 'https://docs.google.com/presentation/d/1yh-SdomGXLuTS94SJwDwckcNEONgKcPLGMnD32U7gyM/edit?usp=sharing' },
+    { from: './_gh-pages/events/next.html', to: nextEvent.eventUrl },
     { from: './_gh-pages/suggestions.html', to: 'https://forms.gle/Sv7Y6ixNXw9oyFSc6' },
   ];
 
@@ -749,12 +730,6 @@ async function main() {
   for (const evt of events) {
     await handleEventPage(evt);
   }
-
-  await handleNextEventPage({
-    nextEvent: nextEvent,
-
-    outPath: './_gh-pages/events/next.html',
-  });
 
   const messages = [
     (
