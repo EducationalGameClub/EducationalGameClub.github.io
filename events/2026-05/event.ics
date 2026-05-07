@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:e3e752f1-9108-4a5a-bd96-d10d25bbc4e5
+SUMMARY:Educational Game Club Discussion of The Electric Shocktopus
+DTSTAMP:20260507T155800Z
+DTSTART:20260529T010000Z
+DESCRIPTION:Join video call: https://EducationalGameClub.com/events/2026-05
+	/meet\n\nEvent details: https://EducationalGameClub.com/events/2026-05/
+URL:https://educationalgameclub.com/events/2026-05/
+LOCATION:https://EducationalGameClub.com/events/2026-05/meet
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
