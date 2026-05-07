@@ -703,15 +703,31 @@ async function main() {
       callUrl: 'https://meet.google.com/rao-jaeg-drb',
       eventUrl: 'https://EducationalGameClub.com/events/2026-04/',
       image: { name: 'image.jpg', width: 1200, height: 630 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2026-04/',
       outDirPath: './_gh-pages/events/2026-04/',
+    },
+    {
+      uid: 'e3e752f1-9108-4a5a-bd96-d10d25bbc4e5',
+      title: 'Discussion of The Electric Shocktopus',
+      brief: `We'll be discussing The Electric Shocktopus by TestTubeGames, a 2D platformer where you learn about electromagnetism by playing as an electrically charged octopus.`,
+      start: makeUtcDate(2026, 5, 29, 1),
+      duration: { hours: 1, minutes: 30 },
+      callUrl: 'https://EducationalGameClub.com/events/2026-05/meet',
+      eventUrl: 'https://EducationalGameClub.com/events/2026-05/',
+      image: { name: 'image.jpg', width: 616, height: 322 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2026-05/',
+      outDirPath: './_gh-pages/events/2026-05/',
     },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
   const redirects = [
+    { from: './_gh-pages/events/2026-05/meet.html', to: 'https://meet.google.com/wqz-wudt-ree' },
+
     { from: './_gh-pages/collider2026.html', to: 'https://docs.google.com/presentation/d/1yh-SdomGXLuTS94SJwDwckcNEONgKcPLGMnD32U7gyM/edit?usp=sharing' },
     { from: './_gh-pages/wila-events.html', to: 'https://www.meetup.com/edtechseattle/events/' },
     { from: './_gh-pages/events/next.html', to: nextEvent.eventUrl },
