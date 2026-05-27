@@ -14,7 +14,7 @@
 </style>
 
 # Educational Game Club
-Each month, we pick an educational game, play it, and then meet to discuss it. It’s like a book club but for educational games instead of books.
+Each month, we pick an educational game, play it, and then meet to discuss it. It’s like a book club but for educational games.
 
 <div class="emoji-paragraph">
   <div class="emoji">🔔&nbsp;</div>
