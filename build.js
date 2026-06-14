@@ -70,6 +70,21 @@ function replaceVariables(s, variables) {
   );
 }
 
+// Appends a path to a URL ensuring there's a slash between them.
+// Examples:
+//   - addPathToUrl('https://EducationalGameClub.com/', 'meet') => 'https://EducationalGameClub.com/meet'
+//   - addPathToUrl('https://EducationalGameClub.com', 'meet') => 'https://EducationalGameClub.com/meet'
+//
+// I would have liked to have used `new URL` but it doesn't preserve casing:
+//   (new URL('https://EducationalGameClub.com/', 'meet')).toString() => 'https://educationalgameclub.com/meet'
+function addPathToUrl(baseUrl, pathSegment) {
+  return (
+    baseUrl +
+    (baseUrl.endsWith('/') ? '' : '/') +
+    pathSegment
+  );
+}
+
 function calendarEventTitle(evt) {
   return 'Educational Game Club ' + evt.title;
 }
@@ -199,6 +214,15 @@ async function renderEventPage(evt) {
 }
 
 async function handleEventPage(evt) {
+  if (evt.meetUrl) {
+    const googleMeetUrl = evt.meetUrl;
+    const ourMeetUrl = addPathToUrl(evt.eventUrl, 'meet');
+    const ourMeetPath = path.join(evt.outDirPath, 'meet.html');
+
+    await handleRedirectPage({ from: ourMeetPath, to: googleMeetUrl });
+    evt.callUrl = ourMeetUrl;
+  }
+
   const eventHtml = await renderEventPage(evt);
 
   spawn('mkdir', '-p', evt.outDirPath);
@@ -714,7 +738,7 @@ async function main() {
       brief: `We'll be discussing The Electric Shocktopus by TestTubeGames, a 2D platformer where you learn about electromagnetism by playing as an electrically charged octopus.`,
       start: makeUtcDate(2026, 5, 29, 1),
       duration: { hours: 1, minutes: 30 },
-      callUrl: 'https://EducationalGameClub.com/events/2026-05/meet',
+      meetUrl: 'https://meet.google.com/wqz-wudt-ree',
       eventUrl: 'https://EducationalGameClub.com/events/2026-05/',
       image: { name: 'image.jpg', width: 616, height: 322 },
       // isPastEvent: true,
@@ -726,8 +750,6 @@ async function main() {
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
   const redirects = [
-    { from: './_gh-pages/events/2026-05/meet.html', to: 'https://meet.google.com/wqz-wudt-ree' },
-
     { from: './_gh-pages/collider2026.html', to: 'https://docs.google.com/presentation/d/1yh-SdomGXLuTS94SJwDwckcNEONgKcPLGMnD32U7gyM/edit?usp=sharing' },
     { from: './_gh-pages/wila-events.html', to: 'https://www.meetup.com/edtechseattle/events/' },
     { from: './_gh-pages/events/next.html', to: nextEvent.eventUrl },
