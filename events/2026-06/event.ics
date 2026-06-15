@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:d930e44c-b568-4b32-9ee6-9850ef5e63b4
+SUMMARY:Educational Game Club Discussion of Crack the Circuit
+DTSTAMP:20260615T214620Z
+DTSTART:20260701T010000Z
+DESCRIPTION:Join video call: https://EducationalGameClub.com/events/2026-06
+	/meet\n\nEvent details: https://EducationalGameClub.com/events/2026-06/
+URL:https://educationalgameclub.com/events/2026-06/
+LOCATION:https://EducationalGameClub.com/events/2026-06/meet
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
