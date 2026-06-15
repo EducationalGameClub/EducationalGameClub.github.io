@@ -54,6 +54,7 @@ Each month, we pick an educational game, play it, and then meet to discuss it. I
 <div style="opacity: 0.65; margin-top: 50px;">
   <h2>Past Events</h2>
   <ul>
+    <li><a href="/events/2026-05/">Discussion of The Electric Shocktopus</a> (May 2026)</li>
     <li><a href="/events/2026-04/">Discussion of Duolingo</a> (Apr 2026)</li>
     <li><a href="/events/2026-03/">Discussion of Wake: Tales from the Aqualab</a> (Mar 2026)</li>
     <li><a href="/events/2026-02/">Discussion of Investigation Declaration</a> (Feb 2026)</li>

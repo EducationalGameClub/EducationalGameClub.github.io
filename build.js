@@ -214,6 +214,8 @@ async function renderEventPage(evt) {
 }
 
 async function handleEventPage(evt) {
+  spawn('mkdir', '-p', evt.outDirPath);
+
   if (evt.meetUrl) {
     const googleMeetUrl = evt.meetUrl;
     const ourMeetUrl = addPathToUrl(evt.eventUrl, 'meet');
@@ -225,7 +227,6 @@ async function handleEventPage(evt) {
 
   const eventHtml = await renderEventPage(evt);
 
-  spawn('mkdir', '-p', evt.outDirPath);
   await fs.writeFile(path.join(evt.outDirPath, 'index.html'), eventHtml, { encoding: 'utf8' });
   await writeIcsFileIfChanged(path.join(evt.outDirPath, 'event.ics'), eventIcs(evt));
   if (evt.image) {
@@ -741,10 +742,24 @@ async function main() {
       meetUrl: 'https://meet.google.com/wqz-wudt-ree',
       eventUrl: 'https://EducationalGameClub.com/events/2026-05/',
       image: { name: 'image.jpg', width: 616, height: 322 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2026-05/',
       outDirPath: './_gh-pages/events/2026-05/',
+    },
+    {
+      uid: 'd930e44c-b568-4b32-9ee6-9850ef5e63b4',
+      title: 'Discussion of Crack the Circuit',
+      brief: `We'll be discussing Crack the Circuit by Universe & More, a puzzle game where you learn about electric circuits by using batteries, bulbs, and switches to solve mystery circuits.`,
+      start: makeUtcDate(2026, 7, 1, 1),
+      duration: { hours: 1, minutes: 30 },
+      meetUrl: 'https://meet.google.com/zpc-hybh-ess',
+      eventUrl: 'https://EducationalGameClub.com/events/2026-06/',
+      image: { name: 'image.jpg', width: 1200, height: 630 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2026-06/',
+      outDirPath: './_gh-pages/events/2026-06/',
     },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
