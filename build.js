@@ -756,10 +756,24 @@ async function main() {
       meetUrl: 'https://meet.google.com/zpc-hybh-ess',
       eventUrl: 'https://EducationalGameClub.com/events/2026-06/',
       image: { name: 'image.jpg', width: 1200, height: 630 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2026-06/',
       outDirPath: './_gh-pages/events/2026-06/',
+    },
+    {
+      uid: 'c003c9f3-c722-4929-b6e6-742fb984550f',
+      title: 'Discussion of Order of the Sinking Star',
+      brief: `We'll be discussing Order of the Sinking Star, a commercial puzzle game designed around intrinsic rewards and ideas to discover rather than difficulty for its own sake. What lessons might it hold for educational games?`,
+      start: makeUtcDate(2026, 7, 30, 1),
+      duration: { hours: 1, minutes: 30 },
+      meetUrl: 'https://meet.google.com/kod-takh-jbw',
+      eventUrl: 'https://EducationalGameClub.com/events/2026-07/',
+      image: { name: 'image.jpg', width: 1200, height: 630 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2026-07/',
+      outDirPath: './_gh-pages/events/2026-07/',
     },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
