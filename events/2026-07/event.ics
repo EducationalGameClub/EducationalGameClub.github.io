@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:c003c9f3-c722-4929-b6e6-742fb984550f
+SUMMARY:Educational Game Club Discussion of Order of the Sinking Star
+DTSTAMP:20260720T222824Z
+DTSTART:20260730T010000Z
+DESCRIPTION:Join video call: https://EducationalGameClub.com/events/2026-07
+	/meet\n\nEvent details: https://EducationalGameClub.com/events/2026-07/
+URL:https://educationalgameclub.com/events/2026-07/
+LOCATION:https://EducationalGameClub.com/events/2026-07/meet
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
