@@ -41,14 +41,14 @@ We'll be discussing the demo for [Order of the Sinking Star](https://store.steam
 
 **What can educational games learn from a commercially developed puzzle game?** Puzzle games teach players their mechanics, introduce ideas through a gradual progression, and evoke the pleasure of learning and discovery. As the game's director put it: "[All games are educational. Just, most don't have real-world applicability.](https://youtu.be/qWFScmtiC44?t=2098)"
 
-The design philosophy behind *Order of the Sinking Star* includes:
+The **design philosophy** behind *Order of the Sinking Star* includes:
 - [Designing for intrinsic rather than extrinsic rewards](https://youtu.be/jFPMv8st7J0?t=5448)
 - [Every puzzle communicates a clear idea and is only as difficult as that idea requires.](https://youtu.be/jFPMv8st7J0?t=1051) Puzzles are not hard for the sake of being hard.
 
 Alongside playing the demo, you may want to:
-- [Watch the trailer](https://youtu.be/T0OBDqGDMYU)
-- [Listen to an in-depth interview with the game's director](https://youtu.be/jFPMv8st7J0)
-- [Share feedback in the game's Discord](https://discord.com/servers/order-of-the-sinking-star-1445454668170924072)
+- [Watch the **trailer**](https://youtu.be/T0OBDqGDMYU)
+- [Listen to an **in-depth interview** with the game's director](https://youtu.be/jFPMv8st7J0)
+- [Share feedback in the game's **Discord**](https://discord.com/servers/order-of-the-sinking-star-1445454668170924072)
 
 Thoughts on the game before the event? Share them on 💬 [the forum](https://discourse.educationalgameclub.com/t/discussion-of-order-of-the-sinking-star).
 
