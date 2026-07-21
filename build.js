@@ -764,7 +764,7 @@ async function main() {
     {
       uid: 'c003c9f3-c722-4929-b6e6-742fb984550f',
       title: 'Discussion of Order of the Sinking Star',
-      brief: `We'll be discussing Order of the Sinking Star, a commercial puzzle game designed around intrinsic rewards and ideas to discover rather than difficulty for its own sake. What lessons might it hold for educational games?`,
+      brief: `We'll be discussing Order of the Sinking Star, an ambitious puzzle game directed by Jonathan Blow. Its puzzles are designed around intrinsic rewards and ideas to discover rather than difficulty for its own sake. What lessons might it hold for educational games?`,
       start: makeUtcDate(2026, 7, 30, 1),
       duration: { hours: 1, minutes: 30 },
       meetUrl: 'https://meet.google.com/kod-takh-jbw',

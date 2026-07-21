@@ -37,9 +37,9 @@
 
 <div style="height: 1px; background-color: #d1d9e0b3; margin-bottom: 1rem;"></div>
 
-We'll be discussing the demo for [Order of the Sinking Star](https://store.steampowered.com/app/4597250/Order_of_the_Sinking_Star_Demo/), an upcoming puzzle game by [Thekla, Inc.](https://store.steampowered.com/search/?developer=Thekla%2C%20Inc.)
+We'll be discussing the demo for [Order of the Sinking Star](https://store.steampowered.com/app/4597250/Order_of_the_Sinking_Star_Demo/), an upcoming puzzle game directed by [Jonathan Blow](https://en.wikipedia.org/wiki/Jonathan_Blow).
 
-**What can educational games learn from a commercially developed puzzle game?** Puzzle games teach players their mechanics, introduce ideas through a gradual progression, and evoke the pleasure of learning and discovery. As the game's director put it: "[All games are educational. Just, most don't have real-world applicability.](https://youtu.be/qWFScmtiC44?t=2098)"
+**What can educational games learn from an ambitious, meticulously crafted puzzle game?** Puzzle games teach players their mechanics, introduce ideas through a gradual progression, and evoke the pleasure of learning and discovery. As the game's director put it: "[All games are educational. Just, most don't have real-world applicability.](https://youtu.be/qWFScmtiC44?t=2098)"
 
 The **design philosophy** behind *Order of the Sinking Star* includes:
 - [Designing for intrinsic rather than extrinsic rewards](https://youtu.be/jFPMv8st7J0?t=5448)
