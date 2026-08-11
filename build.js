@@ -770,7 +770,7 @@ async function main() {
       meetUrl: 'https://meet.google.com/kod-takh-jbw',
       eventUrl: 'https://EducationalGameClub.com/events/2026-07/',
       image: { name: 'image.jpg', width: 1200, height: 630 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2026-07/',
       outDirPath: './_gh-pages/events/2026-07/',
