@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:8c4c28a9-c98b-4b3d-b234-98c27fadb6e9
+SUMMARY:Educational Game Club Discussion of Antibody One
+DTSTAMP:20260823T003336Z
+DTSTART:20260901T010000Z
+DESCRIPTION:Join video call: https://EducationalGameClub.com/events/2026-08
+	/meet\n\nEvent details: https://EducationalGameClub.com/events/2026-08/
+URL:https://educationalgameclub.com/events/2026-08/
+LOCATION:https://EducationalGameClub.com/events/2026-08/meet
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
