@@ -775,6 +775,20 @@ async function main() {
       inDirPath: './content/events/2026-07/',
       outDirPath: './_gh-pages/events/2026-07/',
     },
+    {
+      uid: '8c4c28a9-c98b-4b3d-b234-98c27fadb6e9',
+      title: 'Discussion of Antibody One',
+      brief: `We'll be discussing Antibody One by Blendo Games, a short game where you play as a cell and explore the inner world of the human body. How does the immune system fight bacteria? What happens when you eat a pizza?`,
+      start: makeUtcDate(2026, 9, 1, 1),
+      duration: { hours: 1, minutes: 30 },
+      meetUrl: 'https://meet.google.com/qzk-jiyr-fgg',
+      eventUrl: 'https://EducationalGameClub.com/events/2026-08/',
+      image: { name: 'image.jpg', width: 1200, height: 630 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2026-08/',
+      outDirPath: './_gh-pages/events/2026-08/',
+    },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
