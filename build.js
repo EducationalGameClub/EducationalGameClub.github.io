@@ -784,7 +784,7 @@ async function main() {
       meetUrl: 'https://meet.google.com/qzk-jiyr-fgg',
       eventUrl: 'https://EducationalGameClub.com/events/2026-08/',
       image: { name: 'image.jpg', width: 1200, height: 630 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2026-08/',
       outDirPath: './_gh-pages/events/2026-08/',
@@ -794,7 +794,7 @@ async function main() {
 
   const redirects = [
     { from: './_gh-pages/collider2026.html', to: 'https://docs.google.com/presentation/d/1yh-SdomGXLuTS94SJwDwckcNEONgKcPLGMnD32U7gyM/edit?usp=sharing' },
-    { from: './_gh-pages/wila-events.html', to: 'https://www.meetup.com/edtechseattle/events/' },
+    { from: './_gh-pages/wila-events.html', to: 'https://www.meetup.com/seattle-serious-social-impact-games-meetup/' },
     { from: './_gh-pages/events/next.html', to: nextEvent.eventUrl },
     { from: './_gh-pages/suggestions.html', to: 'https://forms.gle/Sv7Y6ixNXw9oyFSc6' },
   ];
