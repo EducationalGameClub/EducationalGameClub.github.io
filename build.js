@@ -789,6 +789,20 @@ async function main() {
       inDirPath: './content/events/2026-08/',
       outDirPath: './_gh-pages/events/2026-08/',
     },
+    {
+      uid: '7be80982-eb26-4ca3-aa1d-ab8c05905d53',
+      title: 'Discussion of Do I Have a Right?',
+      brief: `We'll be discussing Do I Have a Right? by iCivics, a game about constitutional rights for grades 6–12. Run a law firm and win cases by correctly identifying which right applies to each client.`,
+      start: makeUtcDate(2026, 9, 29, 1),
+      duration: { hours: 1, minutes: 30 },
+      meetUrl: 'https://meet.google.com/bvn-ztqg-rfe',
+      eventUrl: 'https://EducationalGameClub.com/events/2026-09/',
+      image: { name: 'image.jpg', width: 1200, height: 630 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2026-09/',
+      outDirPath: './_gh-pages/events/2026-09/',
+    },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
 
