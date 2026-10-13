@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+PRODID:adamgibbons/ics
+METHOD:PUBLISH
+X-PUBLISHED-TTL:PT1H
+BEGIN:VEVENT
+UID:3ce76223-8ad4-45c6-bb43-f0c85e8a97df
+SUMMARY:Educational Game Club Discussion of Quantum Game
+DTSTAMP:20261013T191048Z
+DTSTART:20261028T010000Z
+DESCRIPTION:Join video call: https://EducationalGameClub.com/events/2026-10
+	/meet\n\nEvent details: https://EducationalGameClub.com/events/2026-10/
+URL:https://educationalgameclub.com/events/2026-10/
+LOCATION:https://EducationalGameClub.com/events/2026-10/meet
+DURATION:PT1H30M
+END:VEVENT
+END:VCALENDAR
