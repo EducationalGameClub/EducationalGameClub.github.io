@@ -806,7 +806,7 @@ async function main() {
     {
       uid: '3ce76223-8ad4-45c6-bb43-f0c85e8a97df',
       title: 'Discussion of Quantum Game',
-      brief: `We'll be discussing Quantum Game, a step-by-step introduction to quantum physics. It's co-designed by a quantum physicist and powered by Virtual Lab, an interactive environment for exploring quantum phenomenon.`,
+      brief: `We'll be discussing Quantum Game, a step-by-step introduction to quantum physics. It's co-designed by a quantum physicist and powered by Virtual Lab, an interactive environment for exploring quantum phenomena.`,
       start: makeUtcDate(2026, 10, 28, 1),
       duration: { hours: 1, minutes: 30 },
       meetUrl: 'https://meet.google.com/byp-eawa-hbk',

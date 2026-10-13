@@ -37,7 +37,7 @@
 
 <div style="height: 1px; background-color: #d1d9e0b3; margin-bottom: 1rem;"></div>
 
-We'll be discussing [Quantum Game](https://quantumgame.io/) by [Quantum Flytrap](https://quantumflytrap.com/), a step-by-step introduction to quantum physics. It's co-designed by a quantum physicist and powered by [Virtual Lab](https://lab.quantumflytrap.com/lab/), an interactive environment for exploring quantum phenomenon.
+We'll be discussing [Quantum Game](https://quantumgame.io/) by [Quantum Flytrap](https://quantumflytrap.com/), a step-by-step introduction to quantum physics. It's co-designed by a quantum physicist and powered by [Virtual Lab](https://lab.quantumflytrap.com/lab/), an interactive environment for exploring quantum phenomena.
 
 For more details about the game, see their paper [Visualizing quantum mechanics in an interactive simulation (2022)](https://www.spiedigitallibrary.org/journals/optical-engineering/volume-61/issue-08/081808/Visualizing-quantum-mechanics-in-an-interactive-simulation--Virtual-Lab/10.1117/1.OE.61.8.081808.full).
 
