@@ -54,6 +54,7 @@ Each month, we pick an educational game, play it, and then meet to discuss it. I
 <div style="opacity: 0.65; margin-top: 50px;">
   <h2>Past Events</h2>
   <ul>
+    <li><a href="/events/2026-09/">Discussion of Do I Have a Right?</a> (Sep 2026)</li>
     <li><a href="/events/2026-08/">Discussion of Antibody One</a> (Aug 2026)</li>
     <li><a href="/events/2026-07/">Discussion of Order of the Sinking Star</a> (Jul 2026)</li>
     <li><a href="/events/2026-06/">Discussion of Crack the Circuit</a> (Jun 2026)</li>

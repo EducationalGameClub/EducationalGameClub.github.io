@@ -798,10 +798,24 @@ async function main() {
       meetUrl: 'https://meet.google.com/bvn-ztqg-rfe',
       eventUrl: 'https://EducationalGameClub.com/events/2026-09/',
       image: { name: 'image.jpg', width: 1200, height: 630 },
-      // isPastEvent: true,
+      isPastEvent: true,
   
       inDirPath: './content/events/2026-09/',
       outDirPath: './_gh-pages/events/2026-09/',
+    },
+    {
+      uid: '3ce76223-8ad4-45c6-bb43-f0c85e8a97df',
+      title: 'Discussion of Quantum Game',
+      brief: `We'll be discussing Quantum Game, a step-by-step introduction to quantum physics. It's co-designed by a quantum physicist and powered by Virtual Lab, an interactive environment for exploring quantum phenomenon.`,
+      start: makeUtcDate(2026, 10, 28, 1),
+      duration: { hours: 1, minutes: 30 },
+      meetUrl: 'https://meet.google.com/byp-eawa-hbk',
+      eventUrl: 'https://EducationalGameClub.com/events/2026-10/',
+      image: { name: 'image.jpg', width: 1200, height: 630 },
+      // isPastEvent: true,
+  
+      inDirPath: './content/events/2026-10/',
+      outDirPath: './_gh-pages/events/2026-10/',
     },
   ];
   const nextEvent = events[events.length - 1]; // Assumes they're sorted by ascending date
